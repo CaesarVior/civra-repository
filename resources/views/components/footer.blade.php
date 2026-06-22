@@ -43,7 +43,7 @@
                 <h4>LOREM</h4>
                 <a href="#">Lorem Ipsum</a>
                 <a href="#">Lorem Ipsum</a>
-                <a href="#">Loremm Ipsum</a>
+                <a href="#">Lorem Ipsum</a>
             </div>
         </div>
 

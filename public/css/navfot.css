@@ -6,10 +6,9 @@
 }
 
 body{
-    background:#1e1e1e;
+    background:#282828;
     min-height:100vh;
 }
-
 .navbar{
     width:95%;
     margin:30px auto;

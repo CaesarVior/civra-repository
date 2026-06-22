@@ -10,6 +10,6 @@
     </ul>
 
     <div class="navbar-contact">
-        <a href="#">Contact</a>
+        <a href="#">contact</a>
     </div>
 </nav>
