@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#1e1e1e;
+    min-height:100vh;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+.navbar{
+    width:95%;
+    margin:30px auto;
+    background:#f3f3f3;
+
+    border-radius:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+}
+
+.navbar-logo{
+    font-size:28px;
+    font-weight:700;
+    color:#222;
+}
+
+.navbar-menu{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.navbar-menu a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
+}
+
+.navbar-contact a{
+    text-decoration:none;
+
+    background:#ece8df;
+    color:#222;
+
+    padding:12px 28px;
+    border-radius:999px;
+
+    font-weight:600;
+}
+
+/* =====================
+   CONTENT DUMMY
+===================== */
+
+.dummy-content{
+    height:300px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer{
+    width:100%;
+    background:#cfbca6;
+
+    padding:60px 70px 25px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.footer-left{
+    width:220px;
+}
+
+.footer-image{
+    width:180px;
+    height:180px;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footer-image img{
+    width:120px;
+}
+
+.footer-social{
+    margin-top:15px;
+
+    display:flex;
+    gap:15px;
+}
+
+.footer-social a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+.footer-brand h2{
+    color:white;
+    font-size:48px;
+    font-family:Georgia, serif;
+    font-weight:400;
+}
+
+.footer-links{
+    display:flex;
+    gap:80px;
+}
+
+.footer-links div{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-links h4{
+    color:white;
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#efefef;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:white;
+
+    margin-top:50px;
+    font-size:13px;
+}
