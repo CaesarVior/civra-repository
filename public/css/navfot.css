@@ -10,10 +10,6 @@ body{
     min-height:100vh;
 }
 
-/* =====================
-   NAVBAR
-===================== */
-
 .navbar{
     width:95%;
     margin:30px auto;
@@ -58,17 +54,11 @@ body{
     font-weight:600;
 }
 
-/* =====================
-   CONTENT DUMMY
-===================== */
 
 .dummy-content{
     height:300px;
 }
 
-/* =====================
-   FOOTER
-===================== */
 
 .footer{
     width:100%;
