@@ -8,6 +8,8 @@ services:
     restart: always
     ports:
       - "8002:80"
+    env_file:
+      - .env
     depends_on:
       - artisantz_db
     networks:
@@ -21,7 +23,7 @@ services:
       MYSQL_DATABASE: artisantz
       MYSQL_ROOT_PASSWORD: secretrootpassword
       MYSQL_USER: artisantz
-      MYSQL_PASSWORD: Bismillah123.
+      MYSQL_PASSWORD: Bismillah123
     ports:
       - "3307:3306"
     volumes:
