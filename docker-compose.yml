@@ -16,4 +16,4 @@ services:
 networks:
   workshop_network:
     external: true
-    name: workshop_default
+    name: workshop_net
