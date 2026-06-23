@@ -1,3 +1,4 @@
+# Stage 1: Composer Build
 FROM composer:2.7 AS vendor
 WORKDIR /app
 COPY database/ database/
@@ -9,19 +10,27 @@ RUN composer install \
     --no-scripts \
     --prefer-dist
 
-FROM richarvey/php-fpm-nginx:latest
-
-ENV WEBROOT /var/www/html/public
-ENV APP_ENV staging
+FROM php:8.3-fpm-alpine
 
 WORKDIR /var/www/html
+
+RUN apk add --no-cache \
+    libpng-dev \
+    libjpeg-turbo-dev \
+    freetype-dev \
+    zip \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo pdo_mysql gd zip
 
 COPY . .
 COPY --from=vendor /app/vendor/ ./vendor/
 
-COPY .env.staging .env
+COPY --chown=www-data:www-data .env.staging .env
 
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-EXPOSE 80
+EXPOSE 9000
+CMD ["php-fpm"]
