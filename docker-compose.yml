@@ -1,7 +1,6 @@
 version: "3.8"
 
 services:
-  # Application Service (Laravel 13 + PHP 8.3 + Nginx)
   artisantz_app:
     build:
       context: .
@@ -9,22 +8,21 @@ services:
     container_name: artisantz_app
     restart: always
     ports:
-      - "8080:80" # Akses web via port 8080 di server
+      - "8082:80"
     depends_on:
       - artisantz_db
     networks:
       - artisantz_network
 
-  # Database Service (MySQL)
   artisantz_db:
     image: mysql:8.0
     container_name: artisantz_db
     restart: always
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE:-artisantz}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secretroot}
-      MYSQL_USER: ${DB_USERNAME:-artisantz_user}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-secretpass}
+      MYSQL_DATABASE: ${DB_DATABASE:-artisantz_staging}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-2WTI$pv7O6<^}
+      MYSQL_USER: ${DB_USERNAME:-artisantz}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-Bismillah123.}
     ports:
       - "3306:3306"
     volumes:
