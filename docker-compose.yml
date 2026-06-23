@@ -10,31 +10,10 @@ services:
       - "8002:80"
     env_file:
       - .env
-    depends_on:
-      - artisantz_db
     networks:
-      - artisantz_network
-
-  artisantz_db:
-    image: mysql:8.0
-    container_name: artisantz-db
-    restart: always
-    command: --port=3309
-    environment:
-      MYSQL_DATABASE: artisantz
-      MYSQL_ROOT_PASSWORD: secretrootpassword
-      MYSQL_USER: artisantz
-      MYSQL_PASSWORD: Bismillah123
-    ports:
-      - "3307:3309"
-    volumes:
-      - db_data:/var/lib/mysql
-    networks:
-      - artisantz_network
+      - workshop_network
 
 networks:
-  artisantz_network:
-    driver: bridge
-
-volumes:
-  db_data:
+  workshop_network:
+    external: true
+    name: workshop_default
