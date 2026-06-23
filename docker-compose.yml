@@ -7,7 +7,7 @@ services:
     container_name: artisantz-app
     restart: always
     ports:
-      - "8080:80"
+      - "8002:80"
     depends_on:
       - artisantz_db
     networks:
