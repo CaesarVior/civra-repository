@@ -38,7 +38,6 @@ pipeline {
                         title: "${env.JOB_NAME} #${env.BUILD_NUMBER}", 
                         webhookURL: "${env.DISCORD_WEBHOOK}",
                         notes: "@869558551436210207 @1491314589835591811 @776248115073122334, @7995911519407722576. 🚀 Build selesai!",
-                        showLog: true 
         }
         failure {
             discordSend description: "Branch: ${env.BRANCH_NAME}\nBuild: ${env.BUILD_NUMBER}\nStatus: failure\n\n**Artifacts:**\n\n*No artifacts saved.*", 
@@ -48,7 +47,6 @@ pipeline {
                         title: "${env.JOB_NAME} #${env.BUILD_NUMBER}", 
                         webhookURL: "${env.DISCORD_WEBHOOK}",
                         notes: "@869558551436210207 @1491314589835591811 @776248115073122334, @7995911519407722576. ❌ Build gagal!",
-                        showLog: true 
         }
     }
 }
