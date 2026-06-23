@@ -11,7 +11,7 @@ pipeline {
         stage('Build & Deploy') {
             steps {
                 echo 'Building and starting containers...'
-                sh 'docker-compose up -d --build'
+                sh 'docker compose up -d --build'
             }
         }
 
