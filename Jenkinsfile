@@ -36,7 +36,7 @@ pipeline {
                         link: env.BUILD_URL, 
                         result: 'SUCCESS', 
                         title: "${env.JOB_NAME} #${env.BUILD_NUMBER}", 
-                        webhookURL: "${DISCORD_WEBHOOK}",
+                        webhookURL: "${env.DISCORD_WEBHOOK}",
                         notes: "@869558551436210207 @1491314589835591811 @776248115073122334, @7995911519407722576. 🚀 Build selesai!",
                         showLog: true 
         }
@@ -46,7 +46,7 @@ pipeline {
                         link: env.BUILD_URL, 
                         result: 'FAILURE', 
                         title: "${env.JOB_NAME} #${env.BUILD_NUMBER}", 
-                        webhookURL: "${DISCORD_WEBHOOK}",
+                        webhookURL: "${env.DISCORD_WEBHOOK}",
                         notes: "@869558551436210207 @1491314589835591811 @776248115073122334, @7995911519407722576. ❌ Build gagal!",
                         showLog: true 
         }
