@@ -9,7 +9,7 @@ RUN composer install \
     --no-scripts \
     --prefer-dist
 
-FROM richarvey/php-fpm-nginx:3.1.6
+FROM richarvey/php-fpm-nginx:latest
 
 ENV WEBROOT /var/www/html/public
 ENV APP_ENV staging
