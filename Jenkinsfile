@@ -16,29 +16,16 @@ pipeline {
             }
         }
 
-        stage('Laravel Post-Deployment') {
+stage('Laravel Post-Deployment') {
             steps {
                 echo 'Waiting for database to be fully ready...'
-                sh '''
-                until docker exec artisantz-app php -r "
-                    try {
-                        \$pdo = new PDO('mysql:host=artisantz-db;port=3306;dbname=artisantz', 'artisantz', 'Bismillah123.');
-                        exit(0);
-                    } catch (Exception \$e) {
-                        exit(1);
-                    }
-                " ; do
-                    echo "Database belum siap menerima koneksi, menunggu 3 detik..."
-                    sleep 3
-                done
-                '''
+                // Perintah ini akan looping nge-ping mysql sampai benar-benar siap menerima koneksi
+                sh 'until docker exec artisantz-db mysqladmin ping -h"localhost" --silent; do echo "Waiting for MySQL..."; sleep 2; done'
                 
-                echo 'Running migrations...'
                 sh 'docker exec artisantz-app php artisan migrate --force'
                 sh 'docker exec artisantz-app php artisan optimize:clear'
             }
         }
-    }
 
     post {
         success {
