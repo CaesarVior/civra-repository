@@ -23,7 +23,7 @@ services:
       MYSQL_USER: ${DB_USERNAME:-artisantz_user}
       MYSQL_PASSWORD: ${DB_PASSWORD:-secretpass}
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
     networks:
