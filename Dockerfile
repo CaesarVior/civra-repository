@@ -10,27 +10,15 @@ RUN composer install \
     --no-scripts \
     --prefer-dist
 
-FROM php:8.3-fpm-alpine
+FROM webdevops/php-nginx:8.3-alpine
 
-WORKDIR /var/www/html
+WORKDIR /app
 
-RUN apk add --no-cache \
-    libpng-dev \
-    libjpeg-turbo-dev \
-    freetype-dev \
-    zip \
-    libzip-dev \
-    unzip \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo pdo_mysql gd zip
+COPY --chown=application:application . .
+COPY --from=vendor --chown=application:application /app/vendor/ ./vendor/
 
-COPY . .
-COPY --from=vendor /app/vendor/ ./vendor/
+COPY --chown=application:application .env.staging .env
 
-COPY --chown=www-data:www-data .env.staging .env
+RUN chmod -R 775 /app/storage /app/bootstrap/cache
 
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
-
-EXPOSE 9000
-CMD ["php-fpm"]
+EXPOSE 80
