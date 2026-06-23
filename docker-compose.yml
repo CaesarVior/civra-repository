@@ -16,4 +16,4 @@ services:
 networks:
   workshop_network:
     external: true
-    name: workshop_net
+    name: workshop-playit20262_workshop_net
