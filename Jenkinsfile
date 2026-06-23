@@ -35,7 +35,6 @@ pipeline {
                 title: "${env.JOB_NAME} #${env.BUILD_NUMBER}", 
                 webhookURL: "https://discord.com/api/webhooks/1354805761280315442/WBWj1zEx8LaM5SYJVJcVrW49n4M20BA4dUUg6gm9CXsoBECKnwbAm7m0wevYo4ORKOpd",
                 notes: "<@869558551436210207> <@1491314589835591811> <@776248115073122334> <@7995911519407722576> 🚀 Build selesai!"
-                showChangeset: true,
                 enableArtifactsList: true
             )
         }
@@ -48,7 +47,6 @@ pipeline {
                 title: "${env.JOB_NAME} #${env.BUILD_NUMBER}", 
                 webhookURL: "https://discord.com/api/webhooks/1354805761280315442/WBWj1zEx8LaM5SYJVJcVrW49n4M20BA4dUUg6gm9CXsoBECKnwbAm7m0wevYo4ORKOpd",
                 notes: "<@869558551436210207> <@1491314589835591811> <@776248115073122334> <@7995911519407722576> ❌ Build gagal!"
-                showChangeset: true,
                 enableArtifactsList: true
             )
         }
