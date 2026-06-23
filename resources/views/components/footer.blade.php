@@ -50,6 +50,6 @@
     </div>
 
     <div class="footer-bottom">
-        ©2025 by Kivora Team. All Right Reserved
+        ©2025 by Kivera Team. All Right Reserved
     </div>
 </footer>
