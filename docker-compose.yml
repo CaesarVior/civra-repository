@@ -18,10 +18,10 @@ services:
     container_name: artisantz-db
     restart: always
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE:-artisantz}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-7n^Y;9EL)Qk4}
-      MYSQL_USER: ${DB_USERNAME:-artisantz}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-Bismillah123.}
+      MYSQL_DATABASE: artisantz
+      MYSQL_ROOT_PASSWORD: secretrootpassword
+      MYSQL_USER: artisantz
+      MYSQL_PASSWORD: Bismillah123.
     ports:
       - "3307:3306"
     volumes:
