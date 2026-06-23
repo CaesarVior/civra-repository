@@ -19,7 +19,7 @@ pipeline {
         stage('Laravel Post-Deployment') {
             steps {
                 echo 'Waiting for database...'
-                sh 'sleep 10' 
+                sh 'until docker exec artisantz-db mysqladmin ping -h"localhost" --silent; do echo "Waiting for MySQL..."; sleep 2; done'
                 sh 'docker exec artisantz-app php artisan migrate --force'
                 sh 'docker exec artisantz-app php artisan optimize:clear'
             }
