@@ -19,9 +19,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: ${DB_DATABASE:-artisantz}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secretroot}
-      MYSQL_USER: ${DB_USERNAME:-artisantz_user}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-secretpass}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-7n^Y;9EL)Qk4}
+      MYSQL_USER: ${DB_USERNAME:-artisantz}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-Bismillah123.}
     ports:
       - "3307:3306"
     volumes:
