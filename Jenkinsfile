@@ -16,16 +16,16 @@ pipeline {
             }
         }
 
-stage('Laravel Post-Deployment') {
+        stage('Laravel Post-Deployment') {
             steps {
                 echo 'Waiting for database to be fully ready...'
-                // Perintah ini akan looping nge-ping mysql sampai benar-benar siap menerima koneksi
                 sh 'until docker exec artisantz-db mysqladmin ping -h"localhost" --silent; do echo "Waiting for MySQL..."; sleep 2; done'
                 
                 sh 'docker exec artisantz-app php artisan migrate --force'
                 sh 'docker exec artisantz-app php artisan optimize:clear'
             }
         }
+    }
 
     post {
         success {
