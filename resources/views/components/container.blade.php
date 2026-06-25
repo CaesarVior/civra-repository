@@ -23,4 +23,33 @@
             </div>
 
     </div>
+<div class="artisantz-bottom">
+
+    <div class="best-seller">
+
+        <h2 class="best-title">
+            BEST <span>SELLER!</span>
+        </h2>
+
+        <div class="podium-wrapper">
+
+            <div class="rank rank-left">
+                <h3>#2</h3>
+                <img src="{{ asset('images/kopi2.jpg') }}">
+            </div>
+
+            <div class="rank rank-center">
+                <h3>#1</h3>
+                <img src="{{ asset('images/kopi1.jpg') }}">
+            </div>
+
+            <div class="rank rank-right">
+                <h3>#3</h3>
+                <img src="{{ asset('images/kopi3.jpg') }}">
+            </div>
+
+        </div>
+
+    </div>
+</div>
 </section>

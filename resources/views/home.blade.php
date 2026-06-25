@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisantzz</title>
+    <title>Artisantz</title>
 
     <link rel="stylesheet" href="{{ asset('css/navfot.css') }}">
 </head>
@@ -61,15 +61,41 @@
             </div>
         </div>
 
-        <div class="artisantz-bottom">
-            <div class="card">Design</div>
-            <div class="card">Development</div>
-            <div class="card">Creative</div>
+   
+    </section>
+    <div class="best-seller">
+
+    <h2 class="best-title">
+        BEST <span>SELLER!</span>
+    </h2>
+
+    <div class="podium-wrapper">
+
+        <!-- Ranking 2 -->
+        <div class="rank rank-left">
+            <h3>#2</h3>
+            <img src="{{ asset('images/kopi2.jpg') }}" alt="Best Seller 2">
         </div>
 
-    </section>
+        <!-- Ranking 1 -->
+        <div class="rank rank-center">
+            <h3>#1</h3>
+            <img src="{{ asset('images/kopi1.jpg') }}" alt="Best Seller 1">
+        </div>
+
+        <!-- Ranking 3 -->
+        <div class="rank rank-right">
+            <h3>#3</h3>
+            <img src="{{ asset('images/kopi3.jpg') }}" alt="Best Seller 3">
+        </div>
+
+    </div>
+
+</div>
 
 </x-container>
+
+
 
     </main>
 
