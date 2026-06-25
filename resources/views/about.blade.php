@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
-    @vite(['resources/css/navfot.css'])
-</head>
-
-<body>
     @extends('app')
     @section('content')
-        <x-navbar />
-
         <section class="about-section">
-
             <div class="about-container">
 
                 <!-- Header -->
@@ -93,8 +79,3 @@
 
         </section>
 
-        <x-footer />
-    @endsection
-</body>
-
-</html>
