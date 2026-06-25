@@ -87,12 +87,96 @@ body {
   text-align: center;
   font-size: 21px;
 }
+/* ================= BEST SELLER ================ */
 
+.best-seller{
+    position:absolute;
+    left:50%;
+    bottom:-180px;
+    transform:translate(-50%,-50%);
+    z-index:100;
+}
+
+.best-title{
+    font-size:52px;
+    font-weight:700;
+    text-align: center;
+    margin-bottom:80px;
+}
+
+.best-title span{
+    color:#f4b24f;
+}
+
+.podium-wrapper{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:100px;
+    z-index:2;
+}
+
+/* ranking */
+.rank{
+    position:relative;
+}
+
+.rank h3{
+    font-size:60px;
+    font-weight:800;
+    text-align: center;
+    margin-bottom:15px;
+}
+
+/* gambar */
+.rank img{
+    display:block;
+    overflow: visible;
+    object-fit:cover;
+    background-color: #ffffff;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+/* nomor 1 */
+.rank-center{
+    z-index:3;
+}
+
+.rank-center img{
+    width:240px;
+    height:320px;
+}
+
+/* nomor 2 */
+.rank-left{
+    transform:translateX(60px);
+    z-index:2;
+}
+
+.rank-left img{
+    width:230px;
+    height:220px;
+}
+
+/* nomor 3 */
+.rank-right{
+    transform:translateX(-60px);
+    z-index:2;
+}
+
+.rank-right img{
+    width:230px;
+    height:220px;
+}
 /* ================= CONTAINER ================= */
 .container {
+  position:relative;
+  overflow:visible;
   width: 85%;
   max-width: 1200px;
   margin: 0 auto;
+ 
 }
 
 /* ================= ARTISANTZ SECTION ================= */
@@ -134,14 +218,18 @@ body {
 .artisantz-bottom .card {
   display: flex;
   flex-direction: column;
+  transform: translateY(50%);
 
   background: #f5f5f5;
+  position: relative;
   padding: 25px;
   border-radius: 15px;
 
   min-height: 500px;
   width: 100%;
   max-width: 1500px;
+
+  z-index:1;
 }
 
 /* ================= FOOTER ================= */
