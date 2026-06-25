@@ -21,10 +21,13 @@
         <div class="artisantz-bottom">
             <div class="bard">
             </div>
+        <!-- Background ARTISANTZ -->
+        <div class="best-bg">
+            <x-artisantz-logo />
+        </div>
 
     </div>
 <div class="artisantz-bottom">
-
     <div class="best-seller">
 
         <h2 class="best-title">
@@ -52,4 +55,5 @@
 
     </div>
 </div>
+
 </section>

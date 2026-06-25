@@ -1,9 +1,6 @@
 @extends ('app')
 @section('content')
 
-        <!-- Pattern background (kalau kamu pakai ini) -->
-        <div class="artisantz-pattern"></div>
-
         <!-- HERO SECTION -->
         <section class="hero">
 
@@ -42,9 +39,9 @@
                 </p>
             </div>
         </div>
-
-   
     </section>
+    
+   
     <div class="best-seller">
 
     <h2 class="best-title">
