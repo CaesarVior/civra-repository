@@ -2,22 +2,8 @@
 
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisantz</title>
+    @vite(['resources/css/navfot.css'])
 
-    <link rel="stylesheet" href="{{ asset('css/navfot.css') }}">
-</head>
-
-<body>
-
-    <!-- Navbar -->
-    <x-navbar />
-
-    <main>
 
         <!-- Pattern background (kalau kamu pakai ini) -->
         <div class="artisantz-pattern"></div>
@@ -94,15 +80,7 @@
 </div>
 
 </x-container>
+    
 
-
-
-    </main>
-
-    <!-- Footer -->
-    <x-footer />
-
-</body>
-</html>
 
 @endsection
