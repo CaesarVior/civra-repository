@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <div class="container">
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="#">Artisantz.</a>
-
-                <div class="mx-auto">
-                    <a class="nav-link d-inline mx-2" href="#">Home</a>
-                    <a class="nav-link d-inline mx-2" href="#">About</a>
-                    <a class="nav-link d-inline mx-2" href="#">Gallery</a>
-                </div>
-
-                <button class="contact-btn">
-                    Contact
-                </button>
-            </div>
-        </nav>
-
+@extends('app')
+@section('content')
+    <div class='container-contact'>
         <!-- Content -->
         <div class="row mt-5">
 
@@ -106,6 +79,5 @@
             </div>
 
         </div>
-</body>
-
-</html>
+    </div>
+@endsection
