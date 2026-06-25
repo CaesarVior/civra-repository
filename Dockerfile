@@ -10,6 +10,14 @@ RUN composer install \
     --no-scripts \
     --prefer-dist
 
+FROM node:20.20.2-alpine AS node-builder
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY . .
+RUN npm run build
+
 FROM webdevops/php-nginx:8.3-alpine
 
 WORKDIR /app
@@ -17,6 +25,7 @@ WORKDIR /app
 COPY --chown=application:application . .
 COPY --from=vendor --chown=application:application /app/vendor/ ./vendor/
 
+COPY --from=node-builder --chown=application:application /app/public/build/ ./public/build/
 COPY --chown=application:application .env.staging .env
 
 RUN chmod -R 775 /app/storage /app/bootstrap/cache
