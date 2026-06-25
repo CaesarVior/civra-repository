@@ -19,7 +19,7 @@
 
         <!-- SECTION BAWAHNYA -->
         <div class="artisantz-bottom">
-            <div class="card">
+            <div class="bard">
             </div>
 
     </div>

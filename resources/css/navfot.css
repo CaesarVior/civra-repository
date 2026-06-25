@@ -333,7 +333,7 @@ body {
   padding: 80px 0;
 }
 
-.artisantz-bottom .card {
+.artisantz-bottom .bard {
   display: flex;
   flex-direction: column;
 
@@ -491,7 +491,7 @@ footer {
 /* ================= TABLET ================= */
 @media (max-width: 1024px){
 
-    .artisantz-bottom .card {
+    .artisantz-bottom .bard {
     min-height: 450px;
     padding: 20px;
 
@@ -907,7 +907,7 @@ footer {
     font-weight:600;
 }
 
-  .artisantz-bottom .card {
+  .artisantz-bottom .bard {
     min-height: 400px;
     padding: 20px;
 
