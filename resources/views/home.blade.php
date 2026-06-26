@@ -7,7 +7,7 @@
             <div class="hero-h">
                 <h1>Where Art Meets <br> Your Daily Brew.</h1>
             </div>
-            <div class="hero-p">
+            <div class="hero-p" style="padding-top:20px">
                 <p>
                     Lebih dari sekadar tempat ngopi. Cafe Artisantz adalah ruang <br> kreatif bagi para penikmat rasa,
                     pencari inspirasi, <br>dan pemburu estetika di tengah kota.
