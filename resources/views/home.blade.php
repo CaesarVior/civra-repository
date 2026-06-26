@@ -1,11 +1,5 @@
-@extends('app')
+@extends ('app')
 @section('content')
-    @vite(['resources/css/navfot.css'])
-
-
-    <!-- Pattern background (kalau kamu pakai ini) -->
-    <div class="artisantz-pattern"></div>
-
     <!-- HERO SECTION -->
     <section class="hero">
 
@@ -24,10 +18,10 @@
                 </p>
             </div>
         </div>
-
-        </div>
     </section>
-    <x-container>
+
+
+    <div class="best-seller">
 
         <section class="artisantz-section">
 
@@ -81,5 +75,5 @@
 
         </div>
 
-    </x-container>
-@endsection
+        </x-container>
+    @endsection
