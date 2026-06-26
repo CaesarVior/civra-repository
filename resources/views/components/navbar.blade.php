@@ -1,11 +1,11 @@
 <nav class="navbar">
 
     <div class="navbar-logo">
-        Artisantz.
+        <a href="/" style="text-decoration: none !important; color: #111111;">Artisantz. </a>
     </div>
 
     <ul class="navbar-menu">
-        <li><a href="home">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="about">About</a></li>
         <li><a href="gallery">Gallery</a></li>
     </ul>
@@ -27,7 +27,7 @@
 </div>
 
 <script>
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("show");
-}
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("show");
+    }
 </script>
