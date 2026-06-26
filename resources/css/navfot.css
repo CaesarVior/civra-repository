@@ -24,28 +24,27 @@ body {
 }
 
 /* ================= NAVBAR ================= */
-.navbar {
-  width: 85%;
-  margin: 30px;
-  background: #ffffff;
+.navbar{
+    position: fixed;
 
-  border-radius: 20px;
+    top: 20px;
+    left: 50%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    transform: translateX(-50%);
 
-  padding: 18px 40px;
+    width: min(95%, 1200px);
 
-  position: fixed;
-  top: 0;
-  left: 5.5%;
-  right: auto;
-  transform: tra;
+    margin: 0;
 
-  z-index: 1000;
+    padding: 18px 40px;
 
-  transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 20px;
+
+    z-index: 1000;
 }
 
 /* Saat discroll */
@@ -118,14 +117,39 @@ body {
   z-index: 100;
 }
 
-.best-title {
-  font-size: 52px;
-  transform: translate(0%, 50%);
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 80px;
+.best-title{
+    font-size:52px;
+    font-weight:700;
+    text-align:center;
+
+    padding-top:50px;
+    margin-bottom:80px;
 }
 
+/* =============== RESPONSIVE BEST TITLE ================= */
+@media (max-width:992px){
+    .best-title{
+        font-size:42px;
+        padding-top:80px;
+        margin-bottom:60px;
+    }
+}
+
+@media (max-width:768px){
+    .best-title{
+        font-size:34px;
+        padding-top:25px;
+        margin-bottom:40px;
+    }
+}
+
+@media (max-width:480px){
+    .best-title{
+        font-size:26px;
+        padding-top:15px;
+        margin-bottom:25px;
+    }
+}
 .best-title span {
   color: #f4b24f;
 }
@@ -358,7 +382,8 @@ body {
   display: flex;
   flex-direction: column;
 
-  transform: translateY(50%);
+    transform:none;
+    margin-top:180px;
 
   background: #f5f5f5;
   position: relative;
@@ -372,85 +397,140 @@ body {
 
   z-index: 1;
 }
+/* ================= RESPONSIVE BARD ================ */
+@media (max-width:992px){
+    .artisantz-bottom .bard{
+        margin-top:140px;
+    }
+}
 
+@media (max-width:768px){
+    .artisantz-bottom .bard{
+        margin-top:100px;
+    }
+}
+
+@media (max-width:480px){
+    .artisantz-bottom .bard{
+        margin-top:70px;
+    }
+}
 /* ================= FOOTER ================= */
-footer {
-  width: 100%;
-  background: #000000;
-  padding: 60px;
-  margin-top: 200px;
+.footer{
+    background:#57595B  ;
+    padding:70px 60px 30px;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: center;
-  gap: 15%;
+.footer-container{
+
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    align-items:flex-start;
+    gap:70px;
 }
 
-.footer-left {
-  width: 220px;
+/* kiri */
+
+.footer-left{
+
+    flex-shrink:0;
 }
 
-.footer-image {
-  width: 180px;
-  height: 180px;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-image{
+
+    width:140px;
+    height:140px;
+
+    background:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.footer-image img {
-  width: 120px;
+.footer-image img{
+
+    width:90px;
 }
 
-.footer-social {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
+.footer-social{
+
+    margin-top:25px;
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
 }
 
-.footer-social a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
+.footer-social a{
+
+    color:#fff;
+    font-size:22px;
 }
 
-.footer-brand h2 {
-  color: white;
-  font-size: 48px;
-  font-weight: 400;
+/* kanan */
+
+.footer-brand{
+
+    flex:1;
 }
 
-.footer-links {
-  display: flex;
-  gap: 80px;
+.footer-brand h2{
+
+    color:#fff;
+
+    font-size:52px;
+
+    font-weight:500;
+
+    margin-bottom:45px;
 }
 
-.footer-links div {
-  display: flex;
-  flex-direction: column;
+.footer-links{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,170px);
+
+    gap:60px;
 }
 
-.footer-links h4 {
-  color: white;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+.footer-links h4{
+
+    color:#fff;
+
+    margin-bottom:18px;
 }
 
-.footer-links a {
-  text-decoration: none;
-  color: #efefef;
-  margin-bottom: 8px;
-  font-size: 14px;
+.footer-links a{
+
+    display:block;
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    margin-bottom:10px;
+
+    transition:.3s;
 }
 
-.footer-bottom {
-  text-align: center;
-  color: white;
-  transform: translateY(27px);
-  margin-top: 20px;
-  font-size: 13px;
+.footer-links a:hover{
+
+    color:#fff;
+}
+
+.footer-bottom{
+
+    margin-top:60px;
+
+    text-align:center;
+
+    color:#bbb;
+
+    font-size:14px;
 }
 
 /* ================= ARTISANTZ BACKGROUND ================= */
@@ -466,6 +546,25 @@ footer {
   pointer-events: none;
 
   z-index: 0;
+}
+/* ================== RESPONSIVE BEST BG ================== */
+@media (max-width:768px){
+
+    .best-bg{
+
+        height:45%;
+    }
+
+    .best-bg .artisantz-bg{
+
+        transform:translateY(-10px);
+    }
+
+    .best-bg .artisantz-bg span{
+
+        font-size:70px;
+    }
+
 }
 
 .artisantz-bg {
@@ -707,7 +806,7 @@ footer {
 @media (max-width: 768px) {
   /* Navbar */
   .navbar {
-    width: 95%;
+    width: 80%;
     padding: 15px 20px;
   }
 
@@ -1159,4 +1258,365 @@ textarea {
 
 .text-muted {
   color: #777;
+}
+
+/* ================================================= */
+/* =============== LARGE DESKTOP ==================== */
+/* ================================================= */
+@media (min-width: 1440px) {
+
+  .container-contact{
+    max-width:1200px;
+    padding:60px 80px;
+  }
+
+  .contact-form h1{
+    font-size:56px;
+  }
+
+  .image-box{
+    height:360px;
+  }
+
+}
+
+
+/* ================================================= */
+/* =================== LAPTOP ======================= */
+/* ================================================= */
+@media (max-width:1200px){
+
+  .container-contact{
+    width:92%;
+    padding:40px;
+  }
+
+  .row{
+    gap:30px;
+  }
+
+  .contact-form h1{
+    font-size:42px;
+  }
+
+}
+
+
+/* ================================================= */
+/* ================= TABLET ========================= */
+/* ================================================= */
+@media (max-width:992px){
+
+  .container-contact{
+    width:95%;
+    padding:35px;
+  }
+
+  .row{
+    flex-direction:column;
+    gap:35px;
+  }
+
+  .col-lg-5,
+  .col-lg-7{
+    width:100%;
+  }
+
+  .image-box{
+    height:300px;
+  }
+
+  .card-custom{
+    padding:24px;
+  }
+
+  .contact-form h1{
+    font-size:38px;
+    text-align:center;
+  }
+
+  .contact-form p{
+    text-align:center;
+  }
+
+}
+
+
+/* ================================================= */
+/* ================= MOBILE ========================= */
+/* ================================================= */
+@media (max-width:768px){
+
+  .container-contact{
+    width:95%;
+    padding:25px;
+  }
+
+  .row{
+    gap:25px;
+    margin-top:25px;
+  }
+
+  .image-box{
+    height:240px;
+    font-size:70px;
+  }
+
+  .card-custom{
+    padding:20px;
+  }
+
+  .contact-form h1{
+    font-size:32px;
+    text-align:center;
+  }
+
+  .contact-form p{
+    font-size:15px;
+    text-align:center;
+  }
+
+  .form-control{
+    padding:11px;
+    font-size:15px;
+  }
+
+  textarea{
+    min-height:130px;
+  }
+
+  .btn-primary{
+    padding:13px;
+    font-size:15px;
+  }
+
+}
+
+
+/* ================================================= */
+/* ================= SMALL PHONE ==================== */
+/* ================================================= */
+@media (max-width:576px){
+
+  .container-contact{
+    width:96%;
+    padding:20px;
+    border-radius:12px;
+  }
+
+  .contact-form h1{
+    font-size:28px;
+  }
+
+  .contact-form p{
+    font-size:14px;
+  }
+
+  .image-box{
+    height:200px;
+    font-size:60px;
+  }
+
+  .card-custom{
+    padding:18px;
+  }
+
+  label{
+    font-size:14px;
+  }
+
+  .form-control{
+    padding:10px;
+    font-size:14px;
+  }
+
+  .input-group-text{
+    padding:10px 14px;
+    font-size:14px;
+  }
+
+  .btn-primary{
+    padding:12px;
+    font-size:14px;
+  }
+
+}
+
+
+/* ================================================= */
+/* ============== VERY SMALL PHONE ================== */
+/* ================================================= */
+@media (max-width:400px){
+
+  .container-contact{
+    padding:16px;
+  }
+
+  .contact-form h1{
+    font-size:24px;
+  }
+
+  .contact-form p{
+    font-size:13px;
+  }
+
+  .image-box{
+    height:170px;
+    font-size:48px;
+  }
+
+  .card-custom{
+    padding:15px;
+  }
+
+  label{
+    font-size:13px;
+  }
+
+  .form-control{
+    padding:9px;
+    font-size:13px;
+  }
+
+  .input-group-text{
+    padding:9px 12px;
+    font-size:13px;
+  }
+
+  textarea{
+    min-height:110px;
+  }
+
+  .btn-primary{
+    padding:11px;
+    font-size:13px;
+  }
+
+}
+
+
+/* ================================================= */
+/* ============ EXTRA SMALL (320px) ================= */
+/* ================================================= */
+@media (max-width:320px){
+
+  .container-contact{
+    width:98%;
+    padding:12px;
+  }
+
+  .contact-form h1{
+    font-size:20px;
+  }
+
+  .contact-form p{
+    font-size:12px;
+  }
+
+  .image-box{
+    height:140px;
+    font-size:38px;
+  }
+
+  .card-custom{
+    padding:12px;
+  }
+
+  .row{
+    gap:18px;
+  }
+
+  label{
+    font-size:12px;
+  }
+
+  .form-control{
+    font-size:12px;
+    padding:8px;
+  }
+
+  .input-group-text{
+    font-size:12px;
+    padding:8px 10px;
+  }
+
+  .btn-primary{
+    padding:10px;
+    font-size:12px;
+  }
+
+}
+/* ================= FOOTER RESPONSIVE ================= */
+
+@media (max-width:992px){
+
+        .footer-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .footer-right h2{
+
+        font-size:40px;
+    }
+
+    .footer-menu{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+}
+@media (max-width:768px){
+
+    .footer-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .footer-right h2{
+
+        font-size:40px;
+    }
+
+    .footer-menu{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+}
+@media (max-width:480px){
+
+.footer-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .footer-right h2{
+
+        font-size:40px;
+    }
+
+    .footer-menu{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
 }
