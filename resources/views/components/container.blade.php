@@ -10,9 +10,12 @@
             <!-- RIGHT TEXT -->
             <div class="artisantz-right">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Cafe Artisantz adalah ruang kreatif yang menggabungkan seni, kopi, dan suasana yang nyaman dalam
+                    satu tempat. Kami percaya bahwa secangkir kopi terbaik lahir dari proses yang penuh perhatian dan
+                    kreativitas.
+
+                    Lebih dari sekadar cafe, Artisantz menjadi tempat berkumpulnya para penikmat kopi, pekerja kreatif,
+                    mahasiswa, dan siapa saja yang ingin menikmati suasana yang tenang serta inspiratif.
                 </p>
             </div>
         </div>
@@ -21,39 +24,39 @@
         <div class="artisantz-bottom">
             <div class="bard">
             </div>
-        <!-- Background ARTISANTZ -->
-        <div class="best-bg">
-            <x-artisantz-logo />
-        </div>
-
-    </div>
-<div class="artisantz-bottom">
-    <div class="best-seller">
-
-        <h2 class="best-title">
-            BEST <span>SELLER!</span>
-        </h2>
-
-        <div class="podium-wrapper">
-
-            <div class="rank rank-left">
-                <h3>#2</h3>
-                <img src="{{ asset('images/kopi2.jpg') }}">
-            </div>
-
-            <div class="rank rank-center">
-                <h3>#1</h3>
-                <img src="{{ asset('images/kopi1.jpg') }}">
-            </div>
-
-            <div class="rank rank-right">
-                <h3>#3</h3>
-                <img src="{{ asset('images/kopi3.jpg') }}">
+            <!-- Background ARTISANTZ -->
+            <div class="best-bg">
+                <x-artisantz-logo />
             </div>
 
         </div>
+        <div class="artisantz-bottom">
+            <div class="best-seller">
 
-    </div>
-</div>
+                <h2 class="best-title">
+                    BEST <span>SELLER!</span>
+                </h2>
+
+                <div class="podium-wrapper">
+
+                    <div class="rank rank-left">
+                        <h3>#2</h3>
+                        <img src="{{ asset('images/kopi2.jpg') }}">
+                    </div>
+
+                    <div class="rank rank-center">
+                        <h3>#1</h3>
+                        <img src="{{ asset('images/kopi1.jpg') }}">
+                    </div>
+
+                    <div class="rank rank-right">
+                        <h3>#3</h3>
+                        <img src="{{ asset('images/kopi3.jpg') }}">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
 
 </section>

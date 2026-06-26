@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="about-image">
-                    <img src="{{ asset('images/about.jpg') }}" alt="Artisantz">
+                    <img src="{{ asset('img/artisantz-place.webp') }}" alt="Artisantz">
                 </div>
 
             </div>
