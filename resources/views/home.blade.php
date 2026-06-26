@@ -1,5 +1,4 @@
 @extends('app')
-
 @section('content')
     <section class="hero">
         <x-artisantz-logo />

@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('app')
+@section('content')
+    <div class="card">
+        <x-card></x-card>
+    </div>
+    <div class="card-container">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisantz</title>
-</head>
+        <div class="card-left">
+            Card Kiri
+        </div>
 
-<body>
-    <x-navbar />
-    <x-card />
-    <x-card />
-    <x-card />
+        <div class="card-right">
+            Card Kanan
+        </div>
 
-</body>
-
-</html>
+    </div>
+@endsection
