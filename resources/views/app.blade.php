@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 
     @vite(['resources/css/navfot.css'])
 </head>
+
 <body>
 
     <!-- Navbar global -->
@@ -17,20 +19,21 @@
         @yield('content')
     </main>
 
-    <x-footer /> 
+    <x-footer />
 
-<script>
-window.addEventListener('scroll', function() {
+    <script>
+        window.addEventListener('scroll', function() {
 
-    const navbar = document.querySelector('.navbar');
+            const navbar = document.querySelector('.navbar');
 
-    if(window.scrollY > 50){
-        navbar.classList.add('scrolled');
-    }else{
-        navbar.classList.remove('scrolled');
-    }
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
 
-});
-</script>
+        });
+    </script>
 </body>
+
 </html>
