@@ -40,7 +40,7 @@
 
                     <div>
                         <strong>Office</strong><br>
-                        Jl. Donau Cihuy
+                        Jl. Danau Kerinci Raya, Lesanpuro, Kec. Kedungkandang
                     </div>
 
                 </div>
@@ -55,7 +55,8 @@
                     <h1 class="fw-bold">Get In touch</h1>
 
                     <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Punya pertanyaan, permintaan reservasi, atau ide kolaborasi?
+                    Kami siap membantu. Kirimkan pesan kepada kami dan tim kami akan segera menghubungi Anda kembali.
                     </p>
 
                     <form>
