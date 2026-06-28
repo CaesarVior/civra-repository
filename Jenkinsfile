@@ -30,7 +30,7 @@ pipeline {
     post {
         success {
             discordSend(
-                description: "Branch: ${env.APP_URL}\nBuild: ${env.BUILD_NUMBER}\nStatus: success\n\n*No changes.*\n\n**Artifacts:**\n\n*No artifacts saved.*", 
+                description: "Branch: ${env.APP_ENV}\nBuild: ${env.BUILD_NUMBER}\nStatus: success\n\n*No changes.*\n\n**Artifacts:**\n\n*No artifacts saved.*", 
                 footer: "Jenkins v2.528.3, Discord Notifier v264.v70060b_a_b_d300", 
                 link: env.BUILD_URL, 
                 result: 'SUCCESS', 
