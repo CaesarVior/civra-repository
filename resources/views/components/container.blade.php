@@ -38,17 +38,14 @@
                 </h2>
 
                 <div class="podium-wrapper">
-
                     <div class="rank rank-left">
                         <h3>#2</h3>
                         <img src="{{ asset('img/menu/coffee-artisantz-caramel-machiato.webp') }}">
                     </div>
-
                     <div class="rank rank-center">
                         <h3>#1</h3>
                         <img src="{{ asset('img/menu/americano-honey-berry.webp') }}">
                     </div>
-
                     <div class="rank rank-right">
                         <h3>#3</h3>
                         <img src="{{ asset('img/menu/coffee-brown-sugar-latte.webp') }}">

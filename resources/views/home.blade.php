@@ -1,8 +1,36 @@
 @extends('app')
+
+@push('schema')
+    <script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "CafeOrCoffeeShop",
+  "name": "Artisantz Coffee & Eatery",
+  "image": "{{ asset('img/artisantz-logo.webp') }}",
+  "@@id": "{{ config('app.url') }}/",
+  "url": "{{ config('app.url') }}/",
+  "telephone": "",
+  "priceRange": "RP25000-RP50000",
+  "address": {
+    "@@type": "PostalAddress",
+    "streetAddress": "Jl. Danau Kerinci Raya, Lesanpuro, Kec. Kedungkandang",
+    "addressLocality": "Kota Malang",
+    "addressRegion": "Jawa Timur",
+    "postalCode": "65139",
+    "addressCountry": "ID"
+  }
+}
+</script>
+@endpush
+@section('title', 'Artisantz Coffee & Eatery - Kafe Nyaman & Tempat Nongkrong Terbaik')
+
+@section('meta_description',
+    'Cari cafe estetik untuk kerja atau bersantai? Kunjungi Artisantz Coffee & Eatery.
+    Menyajikan kopi pilihan dan makanan lezat.')
+
 @section('content')
     <section class="hero">
         <x-artisantz-logo />
-
         <div class="hero-content">
             <div class="hero-h">
                 <h1>Where Art Meets <br> Your Daily Brew.</h1>
@@ -17,25 +45,20 @@
     </section>
 
     <x-container>
-
         <section class="artisantz-section">
             <div class="artisantz-wrapper">
                 <div class="artisantz-left">
                     <h2>What Is Artisantz?</h2>
                 </div>
-
                 <div class="artisantz-right">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Artisantz Coffee & Eatery hadir sebagai pelepas penat di tengah kesibukan kota. Kami menyajikan
+                        berbagai varian kopi arabika pilihan, menu masakan western dan lokal yang menggugah selera, serta
+                        atmosfer ruangan yang dirancang khusus untuk kenyamanan Anda bekerja (WFC) maupun berkumpul bersama
+                        orang terdekat.
                     </p>
                 </div>
             </div>
         </section>
-
     </x-container>
 @endsection
