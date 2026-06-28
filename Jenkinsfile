@@ -21,8 +21,8 @@ pipeline {
             steps {
                 echo 'Waiting for database to be fully ready...'
                 sh 'until docker exec main-mysql-container mysqladmin ping --silent; do echo "Waiting for MySQL..."; sleep 2; done'
-                sh 'docker exec artisantz-app php artisan migrate'
-                sh 'docker exec artisantz-app php artisan optimize:clear'
+                sh 'docker exec artisantz-app-container php artisan migrate'
+                sh 'docker exec artisantz-app-container php artisan optimize:clear'
             }
         }
     }
