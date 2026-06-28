@@ -13,9 +13,8 @@ services:
     environment:
       - WEB_DOCUMENT_ROOT=/app/public
   networks:
-    - network-db-staging
+    network-main-mysql:
 
 networks:
-  network-db-staging:
+  network-main-mysql:
     external: true
-    name: network-main-mysql
