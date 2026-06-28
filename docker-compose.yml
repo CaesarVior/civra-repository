@@ -12,10 +12,10 @@ services:
       - .env
     environment:
       - WEB_DOCUMENT_ROOT=/app/public
-    networks:
-      - main-mysql-container
+  networks:
+    - network-db-staging
 
 networks:
-  main-mysql-container:
+  network-db-staging:
     external: true
-    name: main-mysql-container
+    name: network-main-mysql
