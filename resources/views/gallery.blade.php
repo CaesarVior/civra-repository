@@ -1,4 +1,19 @@
 @extends('app')
+@push('schema')
+    <script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "ImageGallery",
+  "name": "Galeri Foto Artisantz Coffee & Eatery",
+  "description": "Koleksi foto suasana kedai kopi dan menu andalan di Artisantz Coffee & Eatery Malang.",
+  "url": "{{ config('app.url') }}/gallery"
+}
+</script>
+@endpush
+@section('title', 'Galeri Foto - Menu Kopi & Suasana Estetik Artisantz Coffee')
+@section('meta_description',
+    'Intip galeri foto suasana indoor/outdoor yang nyaman serta jajaran menu kopi ,
+    manual brew dan non kopi, serta hidangan lezat di Artisantz Coffee & Eatery Malang.')
 @section('content')
     <div class="gallery-section">
         <div class="gallery-container">

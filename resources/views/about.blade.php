@@ -1,4 +1,19 @@
 @extends('app')
+@push('schema')
+    <script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "AboutPage",
+  "name": "Tentang Artisantz Coffee & Eatery",
+  "description": "Kisah, visi, dan dedikasi Artisantz Coffee & Eatery dalam menyajikan kopi berkualitas di Kota Malang.",
+  "url": "{{ config('app.url') }}/about"
+}
+</script>
+@endpush
+@section('title', 'Tentang Kami - Cerita & Konsep Artisantz Coffee & Eatery Malang')
+@section('meta_description',
+    'Pelajari dedikasi Artisantz Coffee & Eatery Malang dalam menyajikan kopi artisan pilihan
+    dan menciptakan ruang kreatif yang nyaman.')
 @section('content')
     <section class="about-section">
         <div class="about-container">
