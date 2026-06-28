@@ -13,9 +13,9 @@ services:
     environment:
       - WEB_DOCUMENT_ROOT=/app/public
     networks:
-      - workshop_network
+      - network-main-mysql
 
 networks:
-  workshop_network:
+  network-main-mysql:
     external: true
-    name: workshop-playit20262_workshop_net
+    name: network-main-mysql
