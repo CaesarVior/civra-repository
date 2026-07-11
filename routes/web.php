@@ -21,4 +21,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/event', function () {
+    return view('event');
+});
+
 require __DIR__.'/auth.php';

@@ -1837,3 +1837,173 @@ textarea {
     transform: rotate(360deg);
   }
 }
+
+/* ================= EVENT ================= */
+
+.event-section{
+    width:100%;
+    padding:70px 0;
+    background:#fff;
+}
+
+.event-container{
+    width:82%;
+    margin:auto;
+}
+
+.event-header{
+    margin-bottom:40px;
+}
+
+.event-header h2{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.event-header p{
+    width:520px;
+    color:#555;
+    line-height:1.6;
+}
+
+.event-gallery{
+    position:relative;
+    margin-bottom:80px;
+}
+
+.event-main-image{
+    width:100%;
+    height:470px;
+    background:#efefef;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    z-index:2;
+}
+
+.event-main-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.event-bg-text{
+    position:absolute;
+    left:50%;
+    top:55%;
+    transform:translate(-50%,-50%);
+    width:120%;
+    text-align:center;
+    font-size:82px;
+    font-weight:800;
+    color:transparent;
+    -webkit-text-stroke:1px #dcdcdc;
+    line-height:0.9;
+    letter-spacing:2px;
+    z-index:1;
+    user-select:none;
+    pointer-events:none;
+}
+
+.event-thumbnails{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:25px;
+}
+
+.event-thumb{
+    width:180px;
+    height:95px;
+    background:#efefef;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.event-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.event-reservation{
+    width:430px;
+    margin:80px auto 0;
+    text-align:center;
+}
+
+.event-reservation h2{
+    font-size:34px;
+    font-weight:700;
+}
+
+.event-reservation p{
+    color:#666;
+    margin-top:8px;
+    margin-bottom:35px;
+}
+
+.event-step{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:18px 22px;
+    background:#fff;
+    border-radius:14px;
+    margin-bottom:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    text-align:left;
+}
+
+.event-number{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#000;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.event-step span{
+    font-size:15px;
+    color:#444;
+    line-height:1.5;
+}
+
+@media(max-width:768px){
+
+.event-container{
+    width:92%;
+}
+
+.event-header p{
+    width:100%;
+}
+
+.event-main-image{
+    height:260px;
+}
+
+.event-bg-text{
+    font-size:45px;
+}
+
+.event-thumbnails{
+    gap:12px;
+}
+
+.event-thumb{
+    width:31%;
+    height:70px;
+}
+
+.event-reservation{
+    width:100%;
+}
+
+}
