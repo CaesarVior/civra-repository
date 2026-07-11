@@ -1,25 +1,32 @@
-<section class="best-seller">
+<section class="about-section">
 
-    <h2 class="best-title">
-        BEST <span>SELLER!</span>
-    </h2>
+    <div class="container">
 
-    <div class="podium-wrapper">
+        <div class="about-wrapper">
 
-        <div class="rank rank-left">
-            <h3>#2</h3>
-            <img src="{{ asset('images/product2.jpg') }}" alt="">
+            <div class="about-left">
+                <h2>
+                    What Is <br>
+                    Artisantz?
+                </h2>
+            </div>
+
+            <div class="about-right">
+
+                <p>
+                    Lorem ipsum dolor sit amet...
+                </p>
+
+                <a href="/about" class="btn-about">
+                    View More
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="rank rank-center">
-            <h3>#1</h3>
-            <img src="{{ asset('images/product1.jpg') }}" alt="">
-        </div>
-
-        <div class="rank rank-right">
-            <h3>#3</h3>
-            <img src="{{ asset('images/product3.jpg') }}" alt="">
-        </div>
+        {{-- Best Seller --}}
+        <x-best-seller />
 
     </div>
 
