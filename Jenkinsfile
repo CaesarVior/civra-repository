@@ -20,9 +20,9 @@ pipeline {
         stage('Laravel Post-Deployment') {
             steps {
                 echo 'Waiting for database to be fully ready...'
-                sh 'until docker exec workshop_db_staging mysqladmin ping --silent; do echo "Waiting for Workshop MySQL..."; sleep 2; done'
-                sh 'docker exec artisantz-app php artisan migrate'
-                sh 'docker exec artisantz-app php artisan optimize:clear'
+                sh 'until docker exec main-mysql-container mysqladmin ping --silent; do echo "Waiting for MySQL..."; sleep 2; done'
+                sh 'docker exec artisantz-app-container php artisan migrate'
+                sh 'docker exec artisantz-app-container php artisan optimize:clear'
             }
         }
     }
@@ -30,7 +30,7 @@ pipeline {
     post {
         success {
             discordSend(
-                description: "Branch: ${env.BRANCH_NAME}\nBuild: ${env.BUILD_NUMBER}\nStatus: success\n\n*No changes.*\n\n**Artifacts:**\n\n*No artifacts saved.*", 
+                description: "Branch: ${env.APP_ENV}\nBuild: ${env.BUILD_NUMBER}\nStatus: success\n\n*No changes.*\n\n**Artifacts:**\n\n*No artifacts saved.*", 
                 footer: "Jenkins v2.528.3, Discord Notifier v264.v70060b_a_b_d300", 
                 link: env.BUILD_URL, 
                 result: 'SUCCESS', 
@@ -41,7 +41,7 @@ pipeline {
         }
         failure {
             discordSend(
-                description: "Branch: ${env.BRANCH_NAME}\nBuild: ${env.BUILD_NUMBER}\nStatus: failure\n\n**Artifacts:**\n\n*No artifacts saved.*", 
+                description: "Branch: ${env.APP_ENV}\nBuild: ${env.BUILD_NUMBER}\nStatus: failure\n\n**Artifacts:**\n\n*No artifacts saved.*", 
                 footer: "Jenkins v2.528.3, Discord Notifier v264.v70060b_a_b_d300", 
                 link: env.BUILD_URL, 
                 result: 'FAILURE', 

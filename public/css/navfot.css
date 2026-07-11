@@ -87,6 +87,7 @@ body {
   text-align: center;
   font-size: 21px;
 }
+
 /* ================= BEST SELLER ================ */
 
 .best-seller {
@@ -168,6 +169,19 @@ body {
 .rank-right img {
   width: 230px;
   height: 220px;
+}
+/* ================ responsive ================= */
+@media (max-width:768px){
+
+    .artisantz-bottom .bard{
+
+        transform:none;
+
+        min-height:auto;
+
+        padding:40px 20px;
+    }
+
 }
 /* ================ ABOUT PAGE ================= */
 .about-section {
@@ -331,7 +345,7 @@ body {
   padding: 80px 0;
 }
 
-.artisantz-bottom .card {
+.artisantz-bottom .bard {
   display: flex;
   flex-direction: column;
   transform: translateY(50%);
@@ -600,7 +614,7 @@ footer {
   }
 
   /* Card */
-  .artisantz-bottom .card{
+  .artisantz-bottom .bard{
     min-height:700px;
   }
 
@@ -756,3 +770,4 @@ footer {
     font-size:40px;
   }
 }
+

@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: artisantz-app:latest
-    container_name: artisantz-app
+    container_name: artisantz-app-container
     restart: always
     ports:
       - "8002:80"
@@ -13,9 +13,8 @@ services:
     environment:
       - WEB_DOCUMENT_ROOT=/app/public
     networks:
-      - workshop_network
+      - network-main-mysql
 
 networks:
-  workshop_network:
+  network-main-mysql:
     external: true
-    name: workshop-playit20262_workshop_net

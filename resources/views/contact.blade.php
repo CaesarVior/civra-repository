@@ -1,4 +1,19 @@
 @extends('app')
+@push('schema')
+    <script type="application/ld+json">
+{
+  "@@context": "https://schema.org",
+  "@@type": "ContactPage",
+  "name": "Hubungi Artisantz Coffee & Eatery",
+  "description": "Informasi kontak, alamat lengkap Google Maps, dan jam operasional Artisantz Coffee & Eatery Malang.",
+  "url": "{{ config('app.url') }}/contact"
+}
+</script>
+@endpush
+@section('title', 'Kontak - Artisantz Coffee & Eatery')
+@section('meta_description',
+    'Hubungi Artisantz Coffee & Eatery Malang untuk reservasi tempat atau event. Cek rute
+    Google Maps, alamat lengkap, dan jam operasional kami di sini.')
 @section('content')
     <div class='container-contact'>
         <!-- Content -->
@@ -25,7 +40,7 @@
 
                     <div>
                         <strong>Office</strong><br>
-                        Jl. Donau Cihuy
+                        Jl. Danau Kerinci Raya, Lesanpuro, Kec. Kedungkandang
                     </div>
 
                 </div>
@@ -40,7 +55,8 @@
                     <h1 class="fw-bold">Get In touch</h1>
 
                     <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Punya pertanyaan, permintaan reservasi, atau ide kolaborasi?
+                    Kami siap membantu. Kirimkan pesan kepada kami dan tim kami akan segera menghubungi Anda kembali.
                     </p>
 
                     <form>
