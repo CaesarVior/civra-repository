@@ -1,22 +1,19 @@
 @extends('app')
 
 @section('content')
+    <x-navbar />
 
+    <main>
 
-<x-navbar />
+        {{-- Hero --}}
+        <x-hero />
 
-<main>
+        {{-- Event --}}
+        <x-event-card />
 
-    {{-- Hero --}}
-    <x-hero />
+        {{-- What is Artisantz --}}
+        <x-container />
 
-    {{-- Event --}}
-    <x-event-card />
-
-    {{-- What is Artisantz --}}
-    <x-container />
-
-    <x-best-seller />
-</main>
-
+        <x-best-seller />
+    </main>
 @endsection
