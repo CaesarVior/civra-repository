@@ -165,6 +165,7 @@ body {
 .event{
     width: 85%;
     max-width: 1200px;
+    transform: translateY(-25%);
     margin: 0 auto;
     position: relative;
     z-index: 5;
@@ -404,6 +405,7 @@ body {
     font-weight:700;
     text-align: center;
     margin-bottom:80px;
+    transform: translateY(-200%);
 }
 
 .best-title span{
@@ -419,6 +421,7 @@ body {
 .podium-wrapper{
     position:relative;
     display:flex;
+    transform:translateY(-35%);
     justify-content:center;
     align-items:flex-end;
     z-index:2;
@@ -428,7 +431,7 @@ body {
 
     left: 0%;
 
-    transform: translateY(0%);
+    transform: translateY(-5%);
 
     width: 100%;
     height: 300px;
@@ -461,7 +464,7 @@ body {
     box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 .rank-center img{
-    transform: translateY(-50px);
+    transform: translateY(-60px);
 }
 
 .rank-left img,
@@ -769,7 +772,7 @@ footer {
   width: 100%;
   background: #57595b;
   padding: 60px;
-  margin-top: 200px;
+  transform: translateY(-100%);
 }
 
 .footer-container {
@@ -2262,21 +2265,16 @@ textarea {
 ======================= */
 
 .login-left{
-    width:50%;
-    background:linear-gradient(
-        180deg,
-        #5d4df3 0%,
-        #7d68ff 100%
-    );
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+    width:55%;
+    min-height:100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .login-left img{
-    width:70%;
-    max-width:500px;
+    width:100%;
+    transform: translate(0%,-10%);
+    height: 100%;
     object-fit:contain;
 }
 
