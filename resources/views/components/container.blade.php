@@ -1,59 +1,38 @@
-<section class="artisantz-section">
+<section class="about-section">
+
     <div class="container">
 
-        <div class="artisantz-wrapper">
-            <!-- LEFT TEXT -->
-            <div class="artisantz-left">
-                <h2>What Is Artisantz?</h2>
-            </div>
+        <div class="about-wrapper">
 
-            <!-- RIGHT TEXT -->
-            <div class="artisantz-right">
-                <p>
-                    Cafe Artisantz adalah ruang kreatif yang menggabungkan seni, kopi, dan suasana yang nyaman dalam
-                    satu tempat. Kami percaya bahwa secangkir kopi terbaik lahir dari proses yang penuh perhatian dan
-                    kreativitas.
-
-                    Lebih dari sekadar cafe, Artisantz menjadi tempat berkumpulnya para penikmat kopi, pekerja kreatif,
-                    mahasiswa, dan siapa saja yang ingin menikmati suasana yang tenang serta inspiratif.
-                </p>
-            </div>
-        </div>
-
-        <!-- SECTION BAWAHNYA -->
-        <div class="artisantz-bottom">
-            <div class="bard">
-            </div>
-            <!-- Background ARTISANTZ -->
-            <div class="best-bg">
-                <x-artisantz-logo />
-            </div>
-
-        </div>
-        <div class="artisantz-bottom">
-            <div class="best-seller">
-
-                <h2 class="best-title">
-                    BEST <span>SELLER!</span>
+            <div class="about-left">
+                <h2>
+                    What Is <br>
+                    Artisantz?
                 </h2>
+            </div>
 
-                <div class="podium-wrapper">
-                    <div class="rank rank-left">
-                        <h3>#2</h3>
-                        <img src="{{ asset('img/menu/coffee-artisantz-caramel-machiato.webp') }}">
-                    </div>
-                    <div class="rank rank-center">
-                        <h3>#1</h3>
-                        <img src="{{ asset('img/menu/americano-honey-berry.webp') }}">
-                    </div>
-                    <div class="rank rank-right">
-                        <h3>#3</h3>
-                        <img src="{{ asset('img/menu/coffee-brown-sugar-latte.webp') }}">
-                    </div>
+            <div class="about-right">
 
-                </div>
+                <p>
+                    Artisantz Coffee & Eatery is more than just a place
+                    to enjoy coffee. We create a warm atmosphere where
+                    every cup is carefully crafted and every meal is
+                    prepared with quality ingredients.
+
+                    Whether you're working, studying, or spending time
+                    with friends, Artisantz is designed to provide a
+                    comfortable space filled with great flavors and
+                    unforgettable moments.
+                </p>
+
+                <a href="/about" class="btn-about">
+                    View More
+                </a>
 
             </div>
+
         </div>
+
+    </div>
 
 </section>
