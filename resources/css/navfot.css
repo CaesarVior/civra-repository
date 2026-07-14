@@ -396,7 +396,7 @@ body {
     position:absolute;
     left:50%;
     bottom:-180px;
-    transform:translate(-50%,200%);
+    transform:translate(-50%,40%);
     z-index:100;
 }
 
@@ -405,7 +405,7 @@ body {
     font-weight:700;
     text-align: center;
     margin-bottom:80px;
-    transform: translateY(-200%);
+    transform: translateY(-300%);
 }
 
 .best-title span{
@@ -454,7 +454,9 @@ body {
     text-align: center;
     margin-bottom:15px;
 }
-
+.center h3{
+  transform: translate(0%,-50%);
+}
 /* gambar */
 .rank img{
     display:block;
@@ -521,7 +523,7 @@ body {
 
     font-size:60px;
     font-weight:800;
-    transform: translateY(-40%);
+    transform: translateY(-60%);
     text-align:center;
     margin-bottom:15px;
 }
@@ -536,14 +538,17 @@ body {
     box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
-/* nomor 1 */
-.rank-center {
-  z-index: 2;
+/* Hanya nomor #1 */
+.rank-center h3{
+    position: relative;
+    top: -60px;   
 }
+
 
 .rank-center img {
   width: 300px;
   height: 300px;
+  z-index: 100;
 }
 
 /* nomor 2 */
@@ -772,7 +777,7 @@ footer {
   width: 100%;
   background: #57595b;
   padding: 60px;
-  transform: translateY(-100%);
+  transform: translateY(-70%);
 }
 
 .footer-container {
@@ -966,23 +971,30 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 0;
-
+    
         transform: translateY(-200px);
         user-select: none;
 }
 
 .artisantz-bg .row {
-    flex: none;
-    height: 80px;
+    height: 140px;          /* lebih tinggi */
+    display: flex;
+    align-items: center;    /* teks di tengah */
+    overflow: hidden; 
+        margin-top: -20px; /* atau -15px *
+
 }
 
 .artisantz-bg span {
+    overflow: hidden;
+    pointer-events: none; /* supaya background tidak bisa diinteraksi */
     font-size: 120px;
-    line-height: 0.8;
     font-weight: 900;
+    line-height: 1;         /* jangan 0.7 */
+    white-space: nowrap;
+
     color: transparent;
     -webkit-text-stroke: 1px #d9d9d9;
-    white-space: nowrap;
 }
 
 .artisantz-bg .row:nth-child(1) span {
@@ -990,7 +1002,7 @@ footer {
 }
 
 .artisantz-bg .row:nth-child(2) span {
-  transform: translateX(-10%);
+  transform: translateX(0%);
 }
 
 .artisantz-bg .row:nth-child(3) span {
