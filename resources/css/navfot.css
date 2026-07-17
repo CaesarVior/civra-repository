@@ -541,7 +541,7 @@ body {
 /* Hanya nomor #1 */
 .rank-center h3{
     position: relative;
-    top: -60px;   
+    top: -70px;   
 }
 
 
@@ -777,7 +777,7 @@ footer {
   width: 100%;
   background: #57595b;
   padding: 60px;
-  transform: translateY(-70%);
+  transform: translateY(10%);
 }
 
 .footer-container {

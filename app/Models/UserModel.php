@@ -2,7 +2,15 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class UserModel extends Authenticatable {}
+class UserModel extends Model
+{
+    protected $table = 'users';
+
+    protected $fillable = [
+        'role_id',
+        'name',
+        'phone_number',
+    ];
+}
