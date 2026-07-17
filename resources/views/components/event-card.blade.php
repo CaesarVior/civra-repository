@@ -2,7 +2,7 @@
 
     <div class="event-card">
 
-        <img src="{{ asset('img/event.webp') }}" alt="New Event">
+        <img src="{{ asset('img/event-banner.webp') }}" alt="New Event">
 
         <div class="event-overlay"></div>
 
