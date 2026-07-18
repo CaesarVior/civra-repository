@@ -1221,7 +1221,6 @@ footer {
   margin: 0 0 10px;
 }
 
-<<<<<<< HEAD
 .card-content p {
   color: #666;
   font-size: 14px;
@@ -1515,8 +1514,7 @@ textarea {
 .text-muted {
   color: #777;
 }
-<<<<<<< HEAD
-=======
+
     .card-content p{
         color: #666;
         font-size: 14px;
@@ -1532,8 +1530,6 @@ textarea {
 
     gap:15px;
 }
->>>>>>> efd358f (Gallery done)
-=======
 
 /* ================================================= */
 /* =============== LARGE DESKTOP ==================== */
@@ -1911,11 +1907,11 @@ textarea {
 .event-bg-text{
     position:absolute;
     left:50%;
-    top:55%;
+    top:50%;
     transform:translate(-50%,-50%);
     width:120%;
     text-align:center;
-    font-size:82px;
+    font-size:clamp(15px, 6vw, 180px);
     font-weight:800;
     color:transparent;
     -webkit-text-stroke:1px #dcdcdc;
@@ -1924,6 +1920,7 @@ textarea {
     z-index:1;
     user-select:none;
     pointer-events:none;
+    white-space: normal;
 }
 
 .event-thumbnails{
@@ -2027,4 +2024,4 @@ textarea {
 }
 
 }
->>>>>>> 6bc3dd33ddbf006ebe216acbee02e68cb7dcc50d
+
