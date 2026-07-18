@@ -11,8 +11,16 @@
                 <h2>Event details</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Konser Teruntuk Kamu – Punar Album Tour bersama @parade.hujan<br><br>
+
+                    Malam untuk berbagi cerita, emosi serta kehangatan yang akan disajikan dengan konsep intimate konser
+                    bersama deretan performer yang seru. Jangan lewatkan kesempatan untuk menjadi bagian dari malam
+                    tersebut.<br><br>
+
+                    🗓 Jumat, 31 Juli 2026<br>
+                    📍 @fbn_artisantz<br><br>
+
+                    Yuk, ajak teman, pasangan, atau orang tersayang dan rasakan langsung hangatnya Konser Teruntuk Kamu
                 </p>
             </div>
 
@@ -62,19 +70,19 @@
 
                 </div>
 
-                <div class="event-step">
+                <a href="https://wa.me/6285645160494" target="_blank" class="event-step">
 
                     <div class="event-number">
                         2
                     </div>
 
                     <span>
-                        Pesan melalui nomor :
+                        Pesan melalui nomor / klik disini :
                         <br>
                         0856-4516-0494
                     </span>
 
-                </div>
+                </a>
 
                 <div class="event-step">
 

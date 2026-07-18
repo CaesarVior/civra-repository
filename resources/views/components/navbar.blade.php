@@ -35,6 +35,7 @@
     <a href="/" class="mobile-menu-link {{ Request::is('/') ? 'active' : '' }}">Home</a>
     <a href="/about" class="mobile-menu-link {{ Request::is('about*') ? 'active' : '' }}">About</a>
     <a href="/gallery" class="mobile-menu-link {{ Request::is('gallery*') ? 'active' : '' }}">Gallery</a>
+    <a href="/event" class="mobile-menu-link {{ Request::is('contact*') ? 'active' : '' }}">Event</a>
     <a href="/contact" class="mobile-menu-link {{ Request::is('contact*') ? 'active' : '' }}">Contact</a>
 
 </div>

@@ -6,14 +6,14 @@
     <main>
 
         {{-- Hero --}}
-        <x-hero />
+        <x-home.hero />
 
         {{-- Event --}}
-        <x-event-card />
+        <x-home.event-card />
 
         {{-- What is Artisantz --}}
-        <x-container />
+        <x-home.container />
 
-        <x-best-seller />
+        <x-home.best-seller />
     </main>
 @endsection

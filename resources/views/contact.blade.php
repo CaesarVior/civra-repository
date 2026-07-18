@@ -30,12 +30,12 @@
 
                     <div class="mb-4">
                         <strong>Email</strong><br>
-                        ABC123@gmail.com
+                        artisantzfbn@gmail.com
                     </div>
 
                     <div class="mb-4">
                         <strong>Phone</strong><br>
-                        (+62) 812345678910
+                        (+62) 85645160494
                     </div>
 
                     <div>
