@@ -70,7 +70,7 @@
 
                 </div>
 
-                <a href="https://wa.me/6285645160494" target="_blank" class="event-step">
+                <div class="event-step">
 
                     <div class="event-number">
                         2
@@ -79,10 +79,13 @@
                     <span>
                         Pesan melalui nomor / klik disini :
                         <br>
-                        0856-4516-0494
+                        <a href="https://wa.me/6285645160494" target="_blank" class="wa-link">
+                            0856-4516-0494
+                        </a>
+
                     </span>
 
-                </a>
+                </div>
 
                 <div class="event-step">
 
