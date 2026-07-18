@@ -16,6 +16,9 @@
         <li>
             <a href="/gallery" class="navbar-link {{ Request::is('gallery*') ? 'active' : '' }}">Gallery</a>
         </li>
+        <li>
+            <a href="/event" class="navbar-link {{ Request::is('event') ? 'active' : '' }}">Event</a>
+        </li>
     </ul>
 
     <div class="navbar-contact">

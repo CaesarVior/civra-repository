@@ -15,7 +15,7 @@
     'Pelajari dedikasi Artisantz Coffee & Eatery Malang dalam menyajikan kopi artisan pilihan
     dan menciptakan ruang kreatif yang nyaman.')
 @section('content')
-    <section class="about-section">
+    <section class="about-page">
         <div class="about-container">
 
             <!-- Header -->

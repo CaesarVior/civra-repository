@@ -1,36 +1,39 @@
-<section class="artisantz-section">
+<section class="about-section">
+
     <div class="container">
 
-        <div class="artisantz-wrapper">
-            <!-- LEFT TEXT -->
-            <div class="artisantz-left">
-                <h2>What Is Artisantz?</h2>
+        <div class="about-wrapper">
+
+            <div class="about-left">
+                <h2>
+                    What Is <br>
+                    Artisantz?
+                </h2>
             </div>
 
-            <!-- RIGHT TEXT -->
-            <div class="artisantz-right">
+            <div class="about-right">
+
                 <p>
-                    Cafe Artisantz adalah ruang kreatif yang menggabungkan seni, kopi, dan suasana yang nyaman dalam
-                    satu tempat. Kami percaya bahwa secangkir kopi terbaik lahir dari proses yang penuh perhatian dan
-                    kreativitas.
+                    Artisantz Coffee & Eatery is more than just a place
+                    to enjoy coffee. We create a warm atmosphere where
+                    every cup is carefully crafted and every meal is
+                    prepared with quality ingredients.
 
-                    Lebih dari sekadar cafe, Artisantz menjadi tempat berkumpulnya para penikmat kopi, pekerja kreatif,
-                    mahasiswa, dan siapa saja yang ingin menikmati suasana yang tenang serta inspiratif.
+                    Whether you're working, studying, or spending time
+                    with friends, Artisantz is designed to provide a
+                    comfortable space filled with great flavors and
+                    unforgettable moments.
                 </p>
-            </div>
-        </div>
 
-        <!-- SECTION BAWAHNYA -->
-        <div class="artisantz-bottom">
-            <div class="bard">
-            </div>
-            <!-- Background ARTISANTZ -->
-            <div class="best-bg">
-                <x-artisantz-logo />
+                <a href="/about" class="btn-about">
+                    View More
+                </a>
+
             </div>
 
         </div>
         <div class="artisantz-bottom">
+
             <div class="best-seller">
 
                 <h2 class="best-title">
@@ -38,22 +41,29 @@
                 </h2>
 
                 <div class="podium-wrapper">
+
+                    <div class="podium-bg"></div>
+
                     <div class="rank rank-left">
                         <h3>#2</h3>
-                        <img src="{{ asset('img/menu/coffee-artisantz-caramel-machiato.webp') }}">
+                        <img src="{{ asset('img/kopi2.webp') }}" alt="">
                     </div>
+
                     <div class="rank rank-center">
                         <h3>#1</h3>
-                        <img src="{{ asset('img/menu/americano-honey-berry.webp') }}">
+                        <img src="{{ asset('img/kopi1.webp') }}" alt="">
                     </div>
+
                     <div class="rank rank-right">
                         <h3>#3</h3>
-                        <img src="{{ asset('img/menu/coffee-brown-sugar-latte.webp') }}">
+                        <img src="{{ asset('img/kopi3.webp') }}" alt="">
                     </div>
 
                 </div>
 
             </div>
+
         </div>
+    </div>
 
 </section>

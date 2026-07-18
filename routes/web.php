@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -13,6 +14,8 @@ Route::get('/', function () {
 
 Route::get('/gallery', [GalleryController::class, 'index']);
 
+Route::get('/admin', [AdminController::class, 'index']);
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -24,5 +27,9 @@ Route::get('/contact', function () {
 Route::get('/event', function () {
     return view('event');
 });
+Route::get('/login', function () {
+    return view('login');
+});
+
 
 require __DIR__.'/auth.php';

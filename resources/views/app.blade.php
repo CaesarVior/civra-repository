@@ -39,15 +39,17 @@
             <p class="footer-loader-text">Tunggu Sebentar</p>
         </div>
     </div>
-    <!-- Navbar global -->
+ @if (!Request::is('login'))
     <x-navbar />
+@endif
 
-    <!-- Konten halaman -->
-    <main>
-        @yield('content')
-    </main>
+<main>
+    @yield('content')
+</main>
 
+@if (!Request::is('login'))
     <x-footer />
+@endif
 
     <script>
         window.addEventListener('scroll', function() {

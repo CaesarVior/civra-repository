@@ -1,7 +1,6 @@
 @extends('app')
 
 @section('content')
-
     <x-navbar />
 
     <section class="event-section">
@@ -12,35 +11,43 @@
                 <h2>Event details</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Konser Teruntuk Kamu – Punar Album Tour bersama @parade.hujan<br><br>
+
+                    Malam untuk berbagi cerita, emosi serta kehangatan yang akan disajikan dengan konsep intimate konser
+                    bersama deretan performer yang seru. Jangan lewatkan kesempatan untuk menjadi bagian dari malam
+                    tersebut.<br><br>
+
+                    🗓 Jumat, 31 Juli 2026<br>
+                    📍 @fbn_artisantz<br><br>
+
+                    Yuk, ajak teman, pasangan, atau orang tersayang dan rasakan langsung hangatnya Konser Teruntuk Kamu
                 </p>
             </div>
 
             <div class="event-gallery">
 
                 <div class="event-main-image">
-                    <img src="{{ asset('images/event-main.png') }}" alt="">
+                    <img src="{{ asset('img/event/event-parade-hujan.webp') }}" alt="">
                 </div>
 
                 <div class="event-bg-text">
                     EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT
                     EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT
-                    EVENT EVENT EVENT
+                    EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT
                 </div>
 
                 <div class="event-thumbnails">
 
                     <div class="event-thumb">
-                        <img src="{{ asset('images/thumb1.png') }}" alt="">
+                        <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
                     </div>
 
                     <div class="event-thumb">
-                        <img src="{{ asset('images/thumb2.png') }}" alt="">
+                        <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
                     </div>
 
                     <div class="event-thumb">
-                        <img src="{{ asset('images/thumb3.png') }}" alt="">
+                        <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
                     </div>
 
                 </div>
@@ -63,19 +70,19 @@
 
                 </div>
 
-                <div class="event-step">
+                <a href="https://wa.me/6285645160494" target="_blank" class="event-step">
 
                     <div class="event-number">
                         2
                     </div>
 
                     <span>
-                        Pesan melalui nomor :
+                        Pesan melalui nomor / klik disini :
                         <br>
                         0856-4516-0494
                     </span>
 
-                </div>
+                </a>
 
                 <div class="event-step">
 
@@ -95,5 +102,4 @@
         </div>
 
     </section>
-
 @endsection

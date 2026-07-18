@@ -28,8 +28,7 @@ body {
   position: fixed;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%);
-  width: min(95%, 1200px);
+  width: min(100%, 1200px);
   margin: 0;
   padding: 18px 40px;
   display: flex;
@@ -37,6 +36,7 @@ body {
   align-items: center;
   border-radius: 20px;
   z-index: 1000;
+  transform: translateX(-50%);
 }
 
 .navbar.scrolled {
@@ -59,6 +59,7 @@ body {
   display: flex;
   list-style: none;
   gap: 40px;
+  transform: translateX(-3%);
 }
 
 .navbar-menu a {
@@ -156,32 +157,231 @@ body {
   color: #000000;
 }
 
+/* =========================
+   EVENT
+========================= */
+
+.event {
+  width: 85%;
+  max-width: 1200px;
+  transform: translateY(-25%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.event-card {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transform: translate(0%, -110%);
+  overflow: hidden;
+  border-radius: 22px;
+
+  cursor: pointer;
+}
+
+/* Gambar */
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+/* Overlay */
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.38);
+}
+
+/* Hover */
+
+.event-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Isi */
+
+.event-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* New Event */
+
+.event-title {
+  position: absolute;
+
+  top: 35px;
+  left: 35px;
+
+  color: #fff;
+
+  font-size: 26px;
+  font-weight: 500;
+}
+
+/* Tombol */
+
+.event-btn {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-decoration: none;
+
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  padding: 10px 26px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 50px;
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s;
+}
+
+.event-btn:hover {
+  background: white;
+  color: black;
+}
+/* ABOUT */
+/* Background Full Width */
+.about-section {
+  width: 100%;
+  min-height: 120vh;
+  background: #e3e3e3;
+  transform: translate(0%, -30%);
+  display: flex;
+  margin-top: -100px;
+  padding-top: 180px;
+}
+.about-page {
+  width: 100%;
+  min-height: 120vh;
+  background: #e3e3e3;
+  display: flex;
+  padding-top: 150px;
+}
+.about-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  transform: translate(0%, 15%);
+}
+
+.about-left {
+  width: 35%;
+}
+
+.about-left h2 {
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+.about-right {
+  width: 65%;
+}
+
+.about-right p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+/* Tombol */
+.btn-about {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 30px;
+  background: #d0b58a;
+  color: #fff;
+
+  text-decoration: none;
+  border-radius: 50px;
+
+  font-weight: 600;
+  transition: 0.3s;
+
+  transform: translate(200%, 0%);
+}
+
+.btn-about:hover {
+  background: #b99867;
+}
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  overflow: hidden;
   min-height: 800px;
-  background: #f5f5f5;
-
-  padding-top: 130px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero-content {
+  width: 85%;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   position: relative;
-  transform: translateY(-50%);
   z-index: 2;
-  text-align: center;
-  font-size: 21px;
 }
 
-.hero-h,
-.hero-p {
-  text-align: center;
-  font-size: 21px;
+.hero-left {
+  width: 30%;
+  text-align: left;
+  transform: translate(0%, -245%);
+}
+.hero-left h1,
+.hero-right h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.hero-left p,
+.hero-right p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero-image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  transform: translate(0%, -30%);
+}
+
+.hero-right {
+  width: 30%;
+  text-align: right;
+  transform: translate(0%, -245%);
 }
 /* ================= BEST SELLER ================ */
 
@@ -189,7 +389,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: -180px;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, 40%);
   z-index: 100;
 }
 
@@ -197,11 +397,77 @@ body {
   font-size: 52px;
   font-weight: 700;
   text-align: center;
-
-  padding-top: 50px;
   margin-bottom: 80px;
+  transform: translateY(-300%);
 }
 
+.best-title span {
+  color: #f4b24f;
+}
+/* Background tulisan */
+.podium .artisantz-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.podium-wrapper {
+  position: relative;
+  display: flex;
+  transform: translateY(-35%);
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+}
+.podium-bg {
+  position: absolute;
+
+  left: 0%;
+
+  transform: translateY(-5%);
+
+  width: 100%;
+  height: 300px;
+
+  background: #b6ae9f;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+/* ranking */
+.rank {
+  position: relative;
+}
+
+.rank h3 {
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.center h3 {
+  transform: translate(0%, -50%);
+}
+/* gambar */
+.rank img {
+  display: block;
+  overflow: visible;
+  object-fit: cover;
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.rank-center img {
+  transform: translateY(-60px);
+}
+
+.rank-left img,
+.rank-right img {
+  width: 270px;
+  height: 300px;
+  transform: translateY(-40px);
+}
 /* =============== RESPONSIVE BEST TITLE ================= */
 @media (max-width: 992px) {
   .best-title {
@@ -235,7 +501,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 100px;
+  gap: 50px;
   z-index: 2;
 }
 
@@ -244,33 +510,37 @@ body {
   position: relative;
 }
 
-.rank h3{
-    position: relative;
-    z-index: 10;
+.rank h3 {
+  position: relative;
+  z-index: 10;
 
-    font-size:60px;
-    font-weight:800;
-    text-align:center;
-    margin-bottom:15px;
+  font-size: 60px;
+  font-weight: 800;
+  transform: translateY(-60%);
+  text-align: center;
+  margin-bottom: 15px;
 }
 /* gambar */
-.rank img{
-    position: relative;
-    z-index: 1;
+.rank img {
+  position: relative;
+  z-index: 1;
 
-    display:block;
-    object-fit:cover;
-    background:#fff;
-    box-shadow:0 15px 30px rgba(0,0,0,.15);
+  display: block;
+  object-fit: cover;
+  background: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* nomor 1 */
-.rank-center {
-  z-index: 2;
+/* Hanya nomor #1 */
+.rank-center h3 {
+  position: relative;
+  top: -70px;
 }
 
 .rank-center img {
-  width: 240px;
+  width: 300px;
+  height: 300px;
+  z-index: 100;
 }
 
 /* nomor 2 */
@@ -287,7 +557,7 @@ body {
 /* nomor 3 */
 .rank-right {
   transform: translateX(-60px);
-  z-index: 2;
+  z-index: 1;
 }
 
 .rank-right img {
@@ -296,7 +566,7 @@ body {
 }
 /* ================ ABOUT PAGE ================= */
 .about-section {
-  padding: 120px 0;
+  padding: 200px 0;
 }
 
 .about-container {
@@ -373,7 +643,7 @@ body {
 .contact-section {
   border-top: 1px solid #ddd;
   padding-top: 50px;
-
+  transform: translateY(-40%);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -499,7 +769,7 @@ footer {
   width: 100%;
   background: #57595b;
   padding: 60px;
-  margin-top: 200px;
+  transform: translateY(10%);
 }
 
 .footer-container {
@@ -689,24 +959,32 @@ footer {
 .artisantz-bg {
   position: absolute;
   inset: 0;
-  z-index: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 0;
+
+  transform: translateY(-200px);
+  user-select: none;
 }
 
 .artisantz-bg .row {
-  flex: 1;
+  height: 140px; /* lebih tinggi */
+  display: flex;
+  align-items: center; /* teks di tengah */
   overflow: hidden;
-  position: relative;
+  margin-top: -20px; /* atau -15px *
+
 }
 
 .artisantz-bg span {
-  display: inline-block;
+    overflow: hidden;
+    pointer-events: none; /* supaya background tidak bisa diinteraksi */
   font-size: 120px;
   font-weight: 900;
+  line-height: 1; /* jangan 0.7 */
   white-space: nowrap;
 
-  user-select: none;
   color: transparent;
   -webkit-text-stroke: 1px #d9d9d9;
 }
@@ -716,7 +994,7 @@ footer {
 }
 
 .artisantz-bg .row:nth-child(2) span {
-  transform: translateX(-10%);
+  transform: translateX(0%);
 }
 
 .artisantz-bg .row:nth-child(3) span {
@@ -757,20 +1035,6 @@ footer {
 
   .navbar-menu {
     gap: 20px;
-  }
-
-  /* Hero */
-  .hero-content {
-    padding: 0 20px;
-  }
-
-  .hero-h h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-
-  .hero-p p {
-    font-size: 18px;
   }
 
   /* Best Seller */
@@ -931,22 +1195,6 @@ footer {
   .navbar-contact a {
     padding: 10px 18px;
     font-size: 14px;
-  }
-
-  /* Hero */
-  .hero {
-    min-height: 500px;
-    padding: 120px 20px 50px;
-  }
-
-  .hero-h h1 {
-    font-size: 36px;
-    line-height: 1.3;
-  }
-
-  .hero-p p {
-    font-size: 16px;
-    line-height: 1.7;
   }
 
   /* Artisantz Section */
@@ -1404,6 +1652,7 @@ footer {
   display: flex;
   gap: 40px;
   margin-top: 40px;
+  height: 90px; /* sesuaikan */
 }
 
 .col-lg-5 {
@@ -1856,172 +2105,326 @@ textarea {
 
 /* ================= EVENT ================= */
 
-.event-section{
-    width:100%;
-    padding:70px 0;
-    background:#fff;
+.event-section {
+  width: 100%;
+  padding: 70px 0;
+  background: #fff;
 }
 
-.event-container{
-    width:82%;
-    margin:auto;
+.event-container {
+  width: 82%;
+  margin: auto;
 }
 
-.event-header{
-    margin-bottom:40px;
+.event-header {
+  margin-bottom: 40px;
 }
 
-.event-header h2{
-    font-size:38px;
-    font-weight:700;
-    margin-bottom:10px;
+.event-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.event-header p{
-    width:520px;
-    color:#555;
-    line-height:1.6;
+.event-header p {
+  width: 520px;
+  color: #555;
+  line-height: 1.6;
 }
 
-.event-gallery{
-    position:relative;
-    margin-bottom:80px;
+.event-gallery {
+  position: relative;
+  margin-bottom: 80px;
+  /* Membuat seluruh elemen galeri otomatis berada di tengah halaman */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.event-main-image{
-    width:100%;
-    height:470px;
-    background:#efefef;
-    border-radius:18px;
-    overflow:hidden;
-    position:relative;
-    z-index:2;
+/* --- UBAH DISINI: Gambar Utama Menjadi Dinamis --- */
+.event-main-image {
+  width: 100%;
+  /* Batasi lebar maksimal poster di desktop agar gambar vertikal tidak terlalu raksasa */
+  max-width: 500px;
+
+  /* Mengubah height kaku (470px) menjadi dinamis mengikuti tinggi asli poster */
+  height: auto;
+
+  background: #efefef;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-.event-main-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.event-main-image img {
+  display: block;
+  width: 100%;
+  /* Mengikuti tinggi asli file gambar yang di-upload agar tidak terpotong */
+  height: auto;
+  object-fit: contain;
 }
 
-.event-bg-text{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    width:120%;
-    text-align:center;
-    font-size:clamp(15px, 6vw, 180px);
-    font-weight:800;
-    color:transparent;
-    -webkit-text-stroke:1px #dcdcdc;
-    line-height:0.9;
-    letter-spacing:2px;
-    z-index:1;
-    user-select:none;
-    pointer-events:none;
-    white-space: normal;
+/* Teks Latar Belakang */
+.event-bg-text {
+  position: absolute;
+  left: 50%;
+  top: 50%; /* Disesuaikan ke tengah wadah galeri */
+  transform: translate(-50%, -50%);
+  width: 120%;
+  text-align: center;
+  font-size: 82px;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px #dcdcdc;
+  line-height: 0.9;
+  letter-spacing: 2px;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
 }
 
-.event-thumbnails{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin-top:25px;
+/* Gambar Kecil di Bawah (Thumbnail) */
+.event-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+  z-index: 2; /* Memastikan thumbnail berada di atas teks latar belakang */
 }
 
-.event-thumb{
-    width:180px;
-    height:95px;
-    background:#efefef;
-    border-radius:14px;
-    overflow:hidden;
+.event-thumb {
+  width: 120px; /* Lebar dikecilkan sedikit agar lebih proporsional dengan poster vertikal */
+  aspect-ratio: 3 / 4; /* Opsional: Membuat bentuk thumbnail mengikuti gaya portrait */
+  background: #efefef;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
-.event-thumb img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.event-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.event-reservation{
-    width:430px;
-    margin:80px auto 0;
-    text-align:center;
+/* Registrasi / Alur Event */
+.event-reservation {
+  width: 430px;
+  margin: 80px auto 0;
+  text-align: center;
 }
 
-.event-reservation h2{
-    font-size:34px;
-    font-weight:700;
+.event-reservation h2 {
+  font-size: 34px;
+  font-weight: 700;
 }
 
-.event-reservation p{
-    color:#666;
-    margin-top:8px;
-    margin-bottom:35px;
+.event-reservation p {
+  color: #666;
+  margin-top: 8px;
+  margin-bottom: 35px;
 }
 
-.event-step{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    padding:18px 22px;
-    background:#fff;
-    border-radius:14px;
-    margin-bottom:18px;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-    text-align:left;
+.event-step {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  background: #fff;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  text-align: left;
 }
 
-.event-number{
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    background:#000;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:700;
-    flex-shrink:0;
+.event-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
-.event-step span{
-    font-size:15px;
-    color:#444;
-    line-height:1.5;
+.event-step span {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
 }
 
-@media(max-width:768px){
+/* Responsive Web Design (Mobile) */
+@media (max-width: 768px) {
+  .event-container {
+    width: 92%;
+  }
 
-.event-container{
-    width:92%;
+  .event-header p {
+    width: 100%;
+  }
+
+  /* --- UBAH DISINI: Responsive Gambar Utama --- */
+  .event-main-image {
+    max-width: 90%; /* Menyesuaikan lebar di layar HP agar pas */
+    height: auto;
+  }
+
+  .event-bg-text {
+    font-size: 45px;
+  }
+
+  .event-thumbnails {
+    gap: 12px;
+  }
+
+  .event-thumb {
+    width: 25%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .event-reservation {
+    width: 100%;
+  }
+}
+/* ========== LOGIN ========== */
+.login-container {
+  margin-top: -120px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
 }
 
-.event-header p{
-    width:100%;
+/* =======================
+   LEFT SIDE
+======================= */
+
+.login-left {
+  width: 55%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login-left img {
+  width: 100%;
+  transform: translate(0%, -10%);
+  height: 100%;
+  object-fit: contain;
 }
 
-.event-main-image{
-    height:260px;
+/* =======================
+   RIGHT SIDE
+======================= */
+
+.login-right {
+  width: 45%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.event-bg-text{
-    font-size:45px;
+.login-content {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
 }
 
-.event-thumbnails{
-    gap:12px;
+.logo {
+  margin-bottom: 80px;
+}
+.logo img {
+  width: 150px; /* Ubah sesuai kebutuhan */
+  height: auto;
+  display: block;
+}
+.login-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
 }
 
-.event-thumb{
-    width:31%;
-    height:70px;
+.login-header p {
+  color: #9a9a9a;
+  font-size: 14px;
+  margin-bottom: 40px;
 }
 
-.event-reservation{
-    width:100%;
+.form-group {
+  margin-bottom: 20px;
 }
 
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 0 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #5d4df3;
+}
+
+button {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 6px;
+  background: #5d4df3;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.login-footer {
+  margin-top: 25px;
+}
+
+.login-footer p {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.login-footer a {
+  color: #5d4df3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 991px) {
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    width: 100%;
+  }
 }
 
