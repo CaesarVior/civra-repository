@@ -170,7 +170,7 @@ body {
   z-index: 5;
 }
 
-.event-card {
+.event-card-home {
   position: relative;
   width: 100%;
   height: 220px;
@@ -183,7 +183,7 @@ body {
 
 /* Gambar */
 
-.event-card img {
+.event-card-home img {
   width: 100%;
   height: 100%;
 
@@ -202,29 +202,22 @@ body {
 
 /* Hover */
 
-.event-card:hover img {
+.event-card-home:hover img {
   transform: scale(1.08);
 }
 
-/* Isi */
-
-.event-content {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
 
 /* New Event */
 
 .event-title {
   position: absolute;
 
-  top: 35px;
-  left: 35px;
+  top: 40px;
+  left: 45px;
 
-  color: #fff;
+  color: #000000;
 
-  font-size: 26px;
+  font-size: 10px;
   font-weight: 500;
 }
 
@@ -289,7 +282,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 100px;
-  transform: translate(0%, 15%);
+  transform: translate(0%,60%);
 }
 
 .about-left {
@@ -389,7 +382,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: -180px;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 65%);
   z-index: 100;
 }
 
@@ -414,7 +407,7 @@ body {
 .podium-wrapper {
   position: relative;
   display: flex;
-  transform: translateY(-35%);
+  transform: translateY(-20%);
   justify-content: center;
   align-items: flex-end;
   z-index: 2;
@@ -769,7 +762,7 @@ footer {
   width: 100%;
   background: #57595b;
   padding: 60px;
-  margin-top: 400px;
+  margin-top: 40px;
 }
 
 .footer-container {
@@ -1481,13 +1474,12 @@ footer {
   padding: 40px 20px;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  justify-content: start;
+.gallery-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
 }
-
 .gallery-item {
   display: flex;
   flex-direction: column;
@@ -1776,7 +1768,6 @@ textarea {
   margin: 50px auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
 
   gap: 15px;
 }
@@ -2104,202 +2095,565 @@ textarea {
   }
 }
 
-/* ================= EVENT ================= */
+/* ==========================
+   EVENT PAGE
+========================== */
 
-.event-section {
-  width: 100%;
-  padding: 70px 0;
-  background: #fff;
+.event-section{
+    width:100%;
+    background:#f8f8f8;
+    padding:60px 0 100px;
 }
 
-.event-container {
-  width: 82%;
-  margin: auto;
+.event-container{
+    width:85%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.event-header {
-  margin-bottom: 40px;
+/* ==========================
+   HERO IMAGE
+========================== */
+
+.event-hero{
+    width:100%;
+    height:420px;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
 }
 
-.event-header h2 {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 10px;
+.event-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.event-header p {
-  width: 520px;
-  color: #555;
-  line-height: 1.6;
+/* ==========================
+   INFO CARD
+========================== */
+
+.event-card{
+    background:#fff;
+    margin:85px auto 70px;
+    transform:none;
+    width:90%;
+    border-radius:22px;
+    display:flex;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    position:relative;
+    z-index:5;
 }
 
-.event-gallery {
-  position: relative;
-  margin-bottom: 80px;
-  /* Membuat seluruh elemen galeri otomatis berada di tengah halaman */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.event-left{
+    flex:2;
+    margin-top: 50px;
+    padding:45px;
 }
 
-/* --- UBAH DISINI: Gambar Utama Menjadi Dinamis --- */
-.event-main-image {
-  width: 100%;
-  /* Batasi lebar maksimal poster di desktop agar gambar vertikal tidak terlalu raksasa */
-  max-width: 500px;
-
-  /* Mengubah height kaku (470px) menjadi dinamis mengikuti tinggi asli poster */
-  height: auto;
-
-  background: #efefef;
-  border-radius: 18px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+.event-right{
+    flex:1;
+    padding:35px;
+    border-left:2px dashed #d8d8d8;
+}
+.event-right p{
+  margin-top: 20px;
+}
+.event-right h3{
+  margin-top: 10px;
+}
+.event-title{
+    font-size:25px;
+    font-weight:700;
+    margin-bottom:30px;
 }
 
-.event-main-image img {
-  display: block;
-  width: 100%;
-  /* Mengikuti tinggi asli file gambar yang di-upload agar tidak terpotong */
-  height: auto;
-  object-fit: contain;
+.event-info{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+    color:#555;
+    font-size:15px;
 }
 
-/* Teks Latar Belakang */
-.event-bg-text {
-  position: absolute;
-  left: 50%;
-  top: 50%; /* Disesuaikan ke tengah wadah galeri */
-  transform: translate(-50%, -50%);
-  width: 120%;
-  text-align: center;
-  font-size: 82px;
-  font-weight: 800;
-  color: transparent;
-  -webkit-text-stroke: 1px #dcdcdc;
-  line-height: 0.9;
-  letter-spacing: 2px;
-  z-index: 1;
-  user-select: none;
-  pointer-events: none;
+.event-info strong{
+    color:#000;
 }
 
-/* Gambar Kecil di Bawah (Thumbnail) */
-.event-thumbnails {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 25px;
-  z-index: 2; /* Memastikan thumbnail berada di atas teks latar belakang */
+.reserve-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#000;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
 }
 
-.event-thumb {
-  width: 120px; /* Lebar dikecilkan sedikit agar lebih proporsional dengan poster vertikal */
-  aspect-ratio: 3 / 4; /* Opsional: Membuat bentuk thumbnail mengikuti gaya portrait */
-  background: #efefef;
-  border-radius: 14px;
-  overflow: hidden;
+.reserve-btn:hover{
+    background:#6d4c41;
 }
 
-.event-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.qr-box{
+    margin-top:30px;
+    text-align:center;
 }
 
-/* Registrasi / Alur Event */
-.event-reservation {
-  width: 430px;
-  margin: 80px auto 0;
-  text-align: center;
+.qr-box img{
+    width:140px;
+}
+.event-thumb.coming-soon{
+      --thumb-width:100%;
+    --thumb-height:480px;
+
+    width:var(--thumb-width);
+    height:var(--thumb-height);
+
+    aspect-ratio:9/16;
+    border-radius:18px;
+    border:2px dashed #d8d8d8;
+    background:#f5f5f5;
+
+    margin-top: 13%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
 }
 
-.event-reservation h2 {
-  font-size: 34px;
-  font-weight: 700;
+.event-thumb.coming-soon span{
+    font-size:18px;
+    font-weight:700;
+    color:#888;
+    letter-spacing:2px;
 }
 
-.event-reservation p {
-  color: #666;
-  margin-top: 8px;
-  margin-bottom: 35px;
+.event-thumb.coming-soon:hover{
+    background:#ececec;
 }
 
-.event-step {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 18px 22px;
-  background: #fff;
-  border-radius: 14px;
-  margin-bottom: 18px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-  text-align: left;
+/* ==========================
+   EVENT DETAIL + ORGANIZER
+========================== */
+
+.event-bottom-card{
+    display:flex;
+    background:#fff;
+    border-radius:20px;
+    margin-top:40px;
+    transform:none;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+    margin-top:60px;
+    z-index: 2;
 }
 
-.event-number {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #000;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  flex-shrink: 0;
+.event-description{
+    flex:2;
+    padding:45px;
 }
 
-.event-step span {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.5;
+.event-description h2{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:25px;
 }
 
-/* Responsive Web Design (Mobile) */
-@media (max-width: 768px) {
-  .event-container {
-    width: 92%;
-  }
-
-  .event-header p {
-    width: 100%;
-  }
-
-  /* --- UBAH DISINI: Responsive Gambar Utama --- */
-  .event-main-image {
-    max-width: 90%; /* Menyesuaikan lebar di layar HP agar pas */
-    height: auto;
-  }
-
-  .event-bg-text {
-    font-size: 45px;
-  }
-
-  .event-thumbnails {
-    gap: 12px;
-  }
-
-  .event-thumb {
-    width: 25%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-  }
-
-  .event-reservation {
-    width: 100%;
-  }
-}
-/* ========== LOGIN ========== */
-.login-container {
-  margin-top: -120px;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
+.event-description p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
 }
 
+/* ==========================
+   ORGANIZER
+========================== */
+
+.organizer-card{
+    flex:1;
+    padding:45px;
+    border-left:2px dashed #dcdcdc;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.organizer-card img{
+    width:170px;
+    height:auto;
+    object-fit:contain;
+    margin-bottom:30px;
+}
+
+.organizer-card h2{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.organizer-card p{
+    margin:12px 0;
+    color:#555;
+    line-height:1.7;
+}
+
+.organizer-card p strong{
+    color:#000;
+}
+.organizer-card a{
+    color:#555;
+    text-decoration:none;
+    transition:.3s;
+    margin-left: 2px;
+}
+
+.organizer-card a:hover{
+    color:#000;
+    text-decoration:underline;
+}
+/* =========================================
+   RESPONSIVE - DESKTOP
+========================================= */
+
+@media (max-width:1440px){
+
+    .event-container{
+        width:92%;
+    }
+
+    .event-card{
+        width:95%;
+    }
+
+    .event-left,
+    .event-right{
+        padding:35px;
+    }
+
+    .event-title{
+        font-size:22px;
+    }
+
+    .event-description{
+        padding:35px;
+    }
+
+    .organizer-card{
+        padding:35px;
+    }
+
+    .event-gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+.event-thumb.coming-soon {
+    --thumb-width: 100%;
+    --thumb-height: 449px;
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    aspect-ratio: 9 / 16;
+    border-radius: 18px;
+    border: 2px dashed #d8d8d8;
+    background: #f5f5f5;
+    margin-top: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+}
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width:1024px){
+
+    .event-container{
+        width:92%;
+    }
+
+    .event-card{
+        width:95%;
+    }
+
+    .event-title{
+        font-size:22px;
+    }
+
+    .event-left,
+    .event-right{
+        padding:35px;
+    }
+
+    .event-bottom-card{
+        margin-top:40px;
+    }
+
+    .event-description{
+        padding:35px;
+    }
+
+    .organizer-card{
+        padding:35px;
+    }
+
+    .event-gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+.event-thumb.coming-soon {
+    --thumb-width: 100%;
+    --thumb-height: 350px;
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+
+    aspect-ratio: 9 / 16;
+    border-radius: 18px;
+    border: 2px dashed #d8d8d8;
+    background: #f5f5f5;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+}
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .event-section{
+        padding:30px 0 60px;
+    }
+
+    .event-container{
+        width:95%;
+    }
+
+    /* HERO */
+
+    .event-hero{
+        height:250px;
+        border-radius:18px;
+    }
+
+    /* CARD */
+
+    .event-card{
+        width:100%;
+        margin-top:20px;
+        transform:none;
+
+        flex-direction:column;
+        border-radius:18px;
+    }
+
+    .event-left{
+        transform:none;
+        padding:25px;
+    }
+
+    .event-right{
+        padding:25px;
+        border-left:none;
+        border-top:2px dashed #ddd;
+    }
+
+    .event-title{
+        font-size:22px;
+        margin-bottom:20px;
+    }
+
+    .event-info{
+        font-size:14px;
+    }
+
+    .reserve-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    /* DESCRIPTION */
+
+    .event-bottom-card{
+        margin-top:35px;
+        transform:none;
+
+        flex-direction:column;
+        border-radius:18px;
+    }
+
+    .event-description{
+        padding:25px;
+    }
+
+    .event-description h2{
+        font-size:24px;
+    }
+
+    .event-description p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    /* ORGANIZER */
+
+    .organizer-card{
+        padding:25px;
+        border-left:none;
+        border-top:2px dashed #ddd;
+    }
+
+    .organizer-card h2{
+        font-size:24px;
+    }
+
+    .organizer-card img{
+        width:140px;
+        margin-bottom:20px;
+    }
+
+    /* GALLERY */
+
+    .event-gallery{
+        margin-top:40px;
+        transform:none;
+    }
+
+    .event-gallery h2{
+        position:relative;
+        font-size:24px;
+    }
+
+    .event-gallery-grid{
+        grid-template-columns:1fr;
+        margin-top:-40px;
+    }
+
+    .event-gallery-grid img{
+        aspect-ratio:4/5;
+        transform:none;
+        border-radius:15px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width:480px){
+
+    .event-hero{
+        height:180px;
+    }
+
+    .event-title{
+        font-size:20px;
+    }
+
+    .event-description h2,
+    .organizer-card h2{
+        font-size:22px;
+    }
+
+    .event-info{
+        font-size:13px;
+    }
+
+    .event-description,
+    .organizer-card{
+        padding:20px;
+    }
+
+    .reserve-btn{
+        padding:12px 18px;
+        font-size:14px;
+    }
+
+}
+/* ==========================
+   GALLERY
+========================== */
+
+.event-gallery{
+    margin-top:60px;
+    transform:none;
+}
+
+.event-gallery h2{
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.event-gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.event-gallery-grid img{
+    width:100%;
+    border-radius:0px;
+    margin-top: -50px;
+    aspect-ratio:9/16;
+    object-fit:contain;
+    transition:.3s;
+}
+
+.event-gallery-grid img:hover{
+    transform:scale(1);
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .event-card{
+        flex-direction:column;
+    }
+
+    .event-right{
+        border-left:none;
+        border-top:2px dashed #ddd;
+    }
+
+    .event-gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .event-hero{
+        height:250px;
+    }
+
+    .event-title{
+        font-size:30px;
+    }
+
+    .event-left,
+    .event-right{
+        padding:30px;
+    }
+
+    .event-gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+}
 /* =======================
    LEFT SIDE
 ======================= */

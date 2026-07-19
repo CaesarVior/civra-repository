@@ -1,6 +1,6 @@
 <section class="event">
 
-    <div class="event-card">
+    <div class="event-card-home">
 
         <img src="{{ asset('img/event-banner.webp') }}" alt="New Event">
 
