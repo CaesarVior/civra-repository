@@ -1,102 +1,138 @@
 @extends('app')
 
+@section('title', 'Event - Artisantz Coffee & Eatery')
+
 @section('content')
+
     <x-navbar />
 
     <section class="event-section">
 
         <div class="event-container">
 
-            <div class="event-header">
-                <h2>Event details</h2>
-
-                <p>
-                    Konser Teruntuk Kamu – Punar Album Tour bersama @parade.hujan<br><br>
-
-                    Malam untuk berbagi cerita, emosi serta kehangatan yang akan disajikan dengan konsep intimate konser
-                    bersama deretan performer yang seru. Jangan lewatkan kesempatan untuk menjadi bagian dari malam
-                    tersebut.<br><br>
-
-                    🗓 Jumat, 31 Juli 2026<br>
-                    📍 @fbn_artisantz<br><br>
-
-                    Yuk, ajak teman, pasangan, atau orang tersayang dan rasakan langsung hangatnya Konser Teruntuk Kamu
-                </p>
+            <!-- HERO IMAGE -->
+            <div class="event-hero">
+                <img src="{{ asset('img/event-banner.webp') }}" alt="Parade Hujan">
             </div>
+
+            <!-- EVENT CARD -->
+            <div class="event-card">
+
+                <!-- LEFT -->
+                <div class="event-left">
+
+                    <h2 class="event-title">
+                        Konser Teruntuk Kamu
+                    </h2>
+
+                    <div class="event-info">
+                        <span>📅</span>
+                        <div>
+                            <strong>Jumat, 31 Juli 2026</strong><br>
+                            19.00 WIB
+                        </div>
+                    </div>
+
+                    <div class="event-info">
+                        <span>📍</span>
+                        <div>
+                            Artisantz Coffee & Eatery
+                        </div>
+                    </div>
+
+                    <div class="event-info">
+                        <span>🎤</span>
+                        <div>
+                            Parade Hujan — Tour Album Punar
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+                <div class="event-right">
+
+                    <h3>Reservasi Sekarang</h3>
+
+                    <p>
+                        Booking meja terlebih dahulu agar tidak kehabisan tempat.
+                    </p>
+
+                    <a href="https://wa.me/6285645160494" target="_blank" class="reserve-btn">
+
+                        Reservasi via WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="event-bottom-card">
+
+                <!-- DESCRIPTION -->
+
+                <div class="event-description">
+
+                    <h2>Event Details</h2>
+
+                    <p>
+                        Malam untuk berbagi cerita, emosi serta kehangatan yang akan
+                        disajikan dengan konsep intimate concert bersama Parade Hujan.
+                        Nikmati pengalaman menikmati kopi sambil mendengarkan musik
+                        secara langsung di Artisantz Coffee & Eatery.
+                    </p>
+
+                    <p>
+                        Jangan lewatkan kesempatan untuk menjadi bagian dari malam
+                        spesial ini bersama teman, pasangan maupun keluarga.
+                    </p>
+
+                </div>
+
+                <!-- ORGANIZER -->
+
+                <div class="organizer-card">
+
+                    <h2>Organizer</h2>
+
+                    <p>
+                        <strong>Artisantz Coffee & Eatery</strong>
+                    </p>
+
+                    <p>📞 0856-4516-0494</p>
+                    <p>
+                        <a href="https://maps.google.com/?q=Artisantz+Coffee+%26+Eatery+Malang" target="_blank">
+                            📍 Artisantz Coffee & Eatery
+                        </a>
+                    </p>
+
+                    <a href="https://www.instagram.com/fbn_artisantz" target="_blank">
+                        📷 @fbn_artisantz
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- GALLERY -->
 
             <div class="event-gallery">
 
-                <div class="event-main-image">
+                <h2>Gallery Event</h2>
+
+                <div class="event-gallery-grid">
+
                     <img src="{{ asset('img/event/event-parade-hujan.webp') }}" alt="">
-                </div>
 
-                <div class="event-bg-text">
-                    EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT
-                    EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT
-                    EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT
-                </div>
+                    <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
+                    <div class="event-thumb coming-soon">
 
-                <div class="event-thumbnails">
+                        <span>COMING SOON</span>
 
-                    <div class="event-thumb">
-                        <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
                     </div>
-
-                    <div class="event-thumb">
-                        <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
-                    </div>
-
-                    <div class="event-thumb">
-                        <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="event-reservation">
-
-                <h2>Cara Reservasi Meja</h2>
-
-                <p>Booking spot mu untuk pengalaman terbaik</p>
-
-                <div class="event-step">
-
-                    <div class="event-number">
-                        1
-                    </div>
-
-                    <span>DP 50% melalui pesanan</span>
-
-                </div>
-
-                <div class="event-step">
-
-                    <div class="event-number">
-                        2
-                    </div>
-
-                    <span>
-                        Pesan melalui nomor / klik disini :
-                        <br>
-                        <a href="https://wa.me/6285645160494" target="_blank" class="wa-link">
-                            0856-4516-0494
-                        </a>
-
-                    </span>
-
-                </div>
-
-                <div class="event-step">
-
-                    <div class="event-number">
-                        3
-                    </div>
-
-                    <span>
-                        Reservasi sehari sebelum hari yang ditentukan,
-                        selain itu tidak bisa
-                    </span>
 
                 </div>
 
@@ -105,4 +141,5 @@
         </div>
 
     </section>
+
 @endsection
