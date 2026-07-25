@@ -2,15 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class UserModel extends Model
+class UserModel extends Authenticatable
 {
-    protected $table = 'users';
+    protected $fillable = ['name', 'email', 'password', 'phone_number', 'role_id'];
 
-    protected $fillable = [
-        'role_id',
-        'name',
-        'phone_number',
-    ];
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }

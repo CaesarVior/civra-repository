@@ -11,4 +11,9 @@ class RoleModel extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function users()
+    {
+        return $this->hasMany(UserModel::class);
+    }
 }
