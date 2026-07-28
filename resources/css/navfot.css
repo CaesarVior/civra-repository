@@ -3101,6 +3101,12 @@ button:hover {
   .about-left h2 {
     font-size: 45px;
     line-height: 1.1;
+    transform:  translateY(-30%);
+  }
+   .about-wrapper {
+    font-size: 45px;
+    line-height: 1.1;
+    margin-top: 10%;
   }
   .hero {
     padding: 110px 0 60px;

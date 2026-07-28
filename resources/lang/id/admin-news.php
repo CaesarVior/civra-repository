@@ -1,7 +1,7 @@
 <?php
 return [
     // index
-    'index-news' => 'Manajemen Berita',
+    'index-news' => 'Event Management',
     'index-search' => 'Cari Data',
     'index-search-placeholder' => 'Cari data berita berdasarkan "Judul" atau "Deskripsi"',
     'index-role' => 'Semua Peran',
@@ -13,9 +13,9 @@ return [
     'index-add-news' => 'Tambah Berita',
 
     'index-table-number' => 'Nomor',
-    'index-table-title' => 'Judul',
-    'index-table-image' => 'Gambar',
-    'index-table-content' => 'Konten',
+    'index-table-title' => 'Nama',
+    'index-table-image' => 'Foto',
+    'index-table-content' => 'Tema',
     'index-table-created-at' => 'Tanggal Dibuat',
     'index-table-status' => 'Status',
     'index-table-action' => 'Aksi',
