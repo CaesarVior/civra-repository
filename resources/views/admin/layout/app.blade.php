@@ -32,7 +32,7 @@
         }
 
         body {
-            background-image: url("{{ asset('img/bg-header.jpg') }}");
+            background-image: url("{{ asset('img/') }}");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;

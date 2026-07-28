@@ -5,13 +5,13 @@
 @section('content')
     <div class="container mx-auto px-4 py-8">
         <div class="text-center mb-8">
-            <h1 class="text-4xl font-semibold text-white mb-2 inline-block px-6 border-b-[1.5px] border-white pb-2">
+            <h1 class="text-4xl font-semibold text-black mb-2 inline-block px-6 border-b-[1.5px] border-black pb-2">
                 {{ __('admin-news.index-news') }}
             </h1>
-            <p class="text-lg font-semibold text-white">Through Language we Connect the World for You</p>
+            <p class="text-lg font-semibold text-black">Fbn Artisantz Coffee & Eatery</p>
         </div>
 
-        <div class="bg-white pb-5 rounded-2xl shadow-sm px-6 py-5">
+        <div class="bg-[#F5F5F5] pb-5 rounded-2xl shadow-sm px-6 py-5">
             <div class="rounded-2xl">
                 <div class="flex flex-col lg:flex-row lg:items-center gap-4 mb-4">
                     <!-- Tombol Tambahkan - di atas pada mobile, di kanan pada desktop -->
@@ -30,7 +30,7 @@
                     <div class="flex flex-row w-full gap-3 order-last lg:order-first">
 
                         <div class="relative w-full lg:flex-1">
-                            <input type="text" id="searchInput" placeholder="Cari data"
+                            <input type="text" id="searchInput" placeholder="Cari data"z
                                 class="w-full bg-white border border-gray-300 text-black rounded-lg pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#6a6ad9] focus:border-transparent">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2"
@@ -61,9 +61,9 @@
             <div class="overflow-x-auto whitespace-nowrap">
                 <div class="min-w-[800px]" id="newsTable">
                     <table class="w-full table-fixed">
-                        <thead class="bg-[#F7F6FE]">
+                        <thead class="bg-[#EEEDEB]">
                             <tr>
-                                <th class="px-4 py-3 text-center text-sm font-bold text-gray-700 w-16">
+                                <th class="px-4 py-3 text-center text-sm font-bold text-gray w-16">
                                     <span>{{ __('admin-news.index-table-number') }}</span>
                                 </th>
                                 <th class="px-4 py-3 text-center text-sm font-bold text-gray-700 w-64">
