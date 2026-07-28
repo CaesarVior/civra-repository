@@ -85,10 +85,10 @@
     <div class="p-4 flex items-center justify-between border-b border-gray-200 bg-white">
         <div class="flex items-center">
             <div class="w-10 h-10 flex items-center justify-center mr-3 overflow-hidden">
-                <img src="{{ asset('img/Badge Adiloka Original-01.png') }}" alt="Logo"
+                <img src="{{ asset('img/artisantz-logo-no-bg-full-version.webp') }}" alt="Logo"
                     class="w-10 h-10 object-contain">
             </div>
-            <h1 class="text-lg font-semibold text-gray-800">Admin Adiloka</h1>
+            <h1 class="text-lg font-semibold text-gray-800">Admin Artisantz</h1>
         </div>
         <button id="sidebarClose" class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-500 hover:text-gray-700">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
@@ -101,53 +101,6 @@
     <!-- Navigation Menu -->
     <nav class="p-4 flex-1 flex flex-col justify-between">
         <ul class="space-y-2">
-            <!-- Dashboard -->
-            {{-- <li>
-                <a href="#"="menu-item flex items-center p-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-[#0C0950] font-medium {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                    <div class="w-6 h-6 mr-3 flex-shrink-0 rounded flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="icon icon-tabler icons-tabler-filled icon-tabler-layout-dashboard w-5 h-5 text-gray-700 hover:text-[#0C0950]">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                                d="M9 3a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2zm0 12a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2v-2a2 2 0 0 1 2 -2zm10 -4a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2zm0 -8a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2v-2a2 2 0 0 1 2 -2z" />
-                        </svg>
-                    </div>
-                    <span>Dashboard</span>
-                </a>
-            </li> --}}
-
-            <!-- SuperAdmin -->
-            {{-- @php
-                use App\Http\Resources\UserResource;
-
-                $user = new UserResource(Auth::user())->toArray(request());
-            @endphp --}}
-
-            {{-- @if ($user && $user['user_roles_name'] === 'Super Admin')
-                <li>
-                    <a href="#"
-                        class="menu-item flex items-center p-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-[#0C0950] font-medium {{ request()->routeIs('admin-superadmin') ? 'active' : '' }}">
-                        <div class="w-6 h-6 mr-3 flex-shrink-0 rounded flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="icon icon-tabler icons-tabler-outline icon-tabler-news w-5 h-5 text-gray-700 hover:text-[#0C0950]">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path
-                                    d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
-                                <path d="M8 8l4 0" />
-                                <path d="M8 12l4 0" />
-                                <path d="M8 16l4 0" />
-                            </svg>
-                        </div>
-                        <span>tes</span>
-                    </a>
-                </li>
-            @endif --}}
-
-
-
             <!-- Berita -->
             <li>
                 <a href="#"
@@ -165,7 +118,7 @@
                             <path d="M8 16l4 0" />
                         </svg>
                     </div>
-                    <span>tes</span>
+                    <span>Event Management</span>
                 </a>
             </li>
 
@@ -187,22 +140,7 @@
                             <path d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
                         </svg>
                     </div>
-                    <span>tes</span>
-                </a>
-            </li>
-
-            <!-- Testimonial -->
-            <li>
-                <a href="#"
-                    class="menu-item flex items-center p-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-[#0C0950] font-medium {{ request()->routeIs('admin-testimonials', 'admin-testimonials-update') ? 'active' : '' }}">
-                    <div class="w-6 h-6 mr-3 flex-shrink-0 rounded flex items-center justify-center">
-                        <svg class="w-5 h-5 text-gray-700 hover:text-[#0C0950]" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                        </svg>
-                    </div>
-                    <span>tes</span>
+                    <span>User Management</span>
                 </a>
             </li>
 
@@ -219,109 +157,16 @@
                                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                             </svg>
                         </div>
-                        <span>tes</span>
+                        <span>Role Management</span>
                     </div>
-                    <svg class="chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                        </path>
-                    </svg>
                 </button>
-                <ul id="pesanan-submenu"
-                    class="submenu ml-5 mt-2 space-y-1 {{ request()->routeIs('admin-order', 'admin-order-details') ? 'active' : '' }}">
-                    <li>
-                        <a href="#"
-                            class="submenu-item block p-2 text-sm text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded {{ request()->routeIs('admin-order') ? 'font-bold text-indigo-600 bg-indigo-50' : '' }}">
-                            tesgement') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="submenu-item block p-2 text-sm text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded {{ request()->routeIs('admin-order-details') ? 'font-bold text-indigo-600 bg-indigo-50' : '' }}">
-                            tesary') }}
-                        </a>
-                    </li>
-                </ul>
             </li>
-
-            <!-- Menu Item: Pengisian Form -->
-            <li>
-                <button
-                    class="menu-toggle w-full flex items-center justify-between p-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-[#0C0950] font-medium"
-                    data-target="form-submenu">
-                    <div class="flex items-center">
-                        <div class="w-6 h-6 mr-3 flex-shrink-0 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-gray-700 icon-gray" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </div>
-                        <span>tesission') }}</span>
-                    </div>
-                    <svg class="chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                        </path>
-                    </svg>
-                </button>
-                <ul id="form-submenu"
-                    class="submenu ml-5 mt-2 space-y-1 {{ request()->routeIs('admin-blogs-create', 'admin-services-create', 'admin-testimonial-create', 'admin-order-create', 'register') ? 'active' : '' }}">
-                    <li>
-                        <a
-                            href="#"="submenu-item block p-2 text-sm text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded {{ request()->routeIs('register') ? 'font-bold text-indigo-600 bg-indigo-50' : '' }}">
-                            tesn') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="submenu-item block p-2 text-sm text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded {{ request()->routeIs('admin-blogs-create') ? 'font-bold text-indigo-600 bg-indigo-50' : '' }}">
-                            tes') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="submenu-item block p-2 text-sm text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded {{ request()->routeIs('admin-services-create') ? 'font-bold text-indigo-600 bg-indigo-50' : '' }}">
-                            tesice') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="submenu-item block p-2 text-sm text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded {{ request()->routeIs('admin-testimonial-create') ? 'font-bold text-indigo-600 bg-indigo-50' : '' }}">
-                            tesimonial') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="submenu-item block p-2 text-sm text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded {{ request()->routeIs('admin-order-create') ? 'font-bold text-indigo-600 bg-indigo-50' : '' }}">
-                            tesr') }}
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- Logout Paling Bawah -->
-        <div class="flex flex-col mt-8 pt-4">
-            <div class="flex flex-col mb-4">
-                <!-- Centered "Ubah Bahasa" text -->
-                <span class="font-semibold text-md text-center mb-2">tesuage') }}</span>
-                <div class="flex items-center justify-center space-x-2">
-                    <a href="#" data-locale="id"
-                        class="language-option flex items-center justify-center border-2 {{ session('locale', 'id') === 'id' ? 'border-indigo-500 ' : 'border-gray-200' }}">
-                        <img src="{{ asset('img/id.png') }}" alt="Indonesia" class="h-6 w-auto" />
-                    </a>
-                    <a href="#" data-locale="en"
-                        class="language-option flex items-center justify-center border-2 {{ session('locale', 'id') === 'en' ? 'border-indigo-500 ' : 'border-gray-200' }}">
-                        <img src="{{ asset('img/uk.png') }}" alt="English" class="h-6 w-auto" />
-                    </a>
-                </div>
-            </div>
 
             <div class="border-t border-gray-200">
                 <button id="logoutBtn"
                     class="flex items-center p-3 rounded-lg text-red-600 hover:bg-red-50 font-medium w-full">
                     <div class="w-6 h-6 mr-3 flex-shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                         </svg>
@@ -329,7 +174,6 @@
                     <span>Logout</span>
                 </button>
             </div>
-        </div>
     </nav>
 </aside>
 <!-- Add this script to your existing script section -->
