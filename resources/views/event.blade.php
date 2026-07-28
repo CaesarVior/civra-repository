@@ -124,16 +124,17 @@
                 <h2>Gallery Event</h2>
 
                 <div class="event-gallery-grid">
+                    @foreach ($events as $event)
+                        @php dd($event); @endphp;
+                        <h2>{{ $event->name }}</h2>
+                        <p>Dibuat oleh: {{ $event->user->name ?? 'Anonim' }}</p>
 
-                    <img src="{{ asset('img/event/event-parade-hujan.webp') }}" alt="">
+                        <img src="{{ asset('img/event/' . $event->image) }}" alt="{{ $event->name }}">
+                    @endforeach
 
-                    <img src="{{ asset('img/event/event-parade-hujan-2.webp') }}" alt="">
                     <div class="event-thumb coming-soon">
-
                         <span>COMING SOON</span>
-
                     </div>
-
                 </div>
 
             </div>

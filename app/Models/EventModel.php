@@ -3,12 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class EventModel extends Model
 {
-    protected $fillable = ['user_id', 'title', 'description', 'event_date'];
+    protected $table = 'events';
 
-    public function user()
+    protected $fillable = ['user_id', 'name', 'photo', 'theme', 'event_date', 'description'];
+
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
