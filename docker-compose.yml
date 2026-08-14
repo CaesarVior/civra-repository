@@ -1,0 +1,32 @@
+services:
+  artisantz_reservation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: artisantz-reservetaion:latest
+    container_name: artisantz-reservetaion-container
+    restart: always
+    ports:
+      - "8008:80"
+    env_file:
+      - .env
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
+    networks:
+      - network-main-mysql
+
+  casheer_queue:
+    image: artisantz-reservetaion:latest
+    container_name: artisantz-reservetaion-queue
+    restart: always
+    command: php artisan queue:work --sleep=3 --tries=3 --max-time=3600
+    env_file:
+      - .env
+    depends_on:
+      - artisantz_reservation
+    networks:
+      - network-main-mysql
+
+networks:
+  network-main-mysql:
+    external: true
